@@ -114,4 +114,50 @@ npm install -g cnpm –registry=https://registr"><meta name="keywords" content="
 </li>
 </ol>
 <hr>
-</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2019-07-04</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Hexo-原创/" title="Hexo 原创">Hexo 原创 </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://yoursite.com/2019/07/04/Hexo框架实现个人博客/,Barry's Blog,Hexo框架实现个人博客,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2019/07/04/一篇新博文/" title="Reverse逆向工程">下一篇</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
+<h2 id="进阶部分（域名更改）"><a href="#进阶部分（域名更改）" class="headerlink" title="进阶部分（域名更改）"></a>进阶部分（域名更改）</h2><h2 id="嫌xxx-github-com太丑了？花钱买一个域名！"><a href="#嫌xxx-github-com太丑了？花钱买一个域名！" class="headerlink" title="嫌xxx.github.com太丑了？花钱买一个域名！"></a>嫌xxx.github.com太丑了？花钱买一个域名！</h2><ol>
+<li><p>ping你的个人博客（xxx.github.io），拿到IP地址后复制下来</p>
+</li>
+<li><p>对你的域名进行管理</p>
+<ul>
+<li><p>添加解析</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th align="center">记录类型</th>
+<th align="center">主机记录</th>
+<th align="center">解析线路</th>
+<th align="center">记录值</th>
+<th align="center">TTL值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CNAME</td>
+<td align="center">www</td>
+<td align="center">默认</td>
+<td align="center">xxx.github.io</td>
+<td align="center">10分钟</td>
+</tr>
+<tr>
+<td align="center">A</td>
+<td align="center">@</td>
+<td align="center">默认</td>
+<td align="center">IP地址</td>
+<td align="center">10分钟</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li><p>最后一步</p>
+<ul>
+<li>到github项目中</li>
+<li>找到Github Pages一栏</li>
+<li>在Custom Domain填上你的域名并保存（注意：域名指”xxx.cn”等等）</li>
+<li>等待十分钟，开始愉快的玩耍</li>
+</ul>
+</li>
+</ol>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2019-07-04</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Hexo/" title="Hexo">Hexo </a><a class="tag" href="/tags/原创/" title="原创">原创 </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://yoursite.com/2019/07/04/Hexo框架实现个人博客/,Barry's Blog,Hexo框架实现个人博客,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2019/07/04/一篇新博文/" title="Reverse逆向工程">下一篇</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
