@@ -7,23 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Hexo框架实现个人博客 - Barry&#39;s Blog</title>
+<title>归档: 2020/2 - Barry&#39;s Blog</title>
 
 
-    <meta name="description" content="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具">
-<meta name="keywords" content="Hexo,已授课,Node.js,Github">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo框架实现个人博客">
-<meta property="og:url" content="http://yoursite.com/2019/07/04/Hexo框架实现个人博客/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Barry&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2020/02/index.html">
 <meta property="og:site_name" content="Barry&#39;s Blog">
-<meta property="og:description" content="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2538191405,1268730134&fm=26&gp=0.jpg">
-<meta property="og:updated_time" content="2019-08-14T12:47:09.000Z">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo框架实现个人博客">
-<meta name="twitter:description" content="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具">
-<meta name="twitter:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2538191405,1268730134&fm=26&gp=0.jpg">
+<meta name="twitter:title" content="Barry&#39;s Blog">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
 
@@ -81,7 +76,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Hexo框架实现个人博客" height="28">
+                <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Barry&#39;s Blog" height="28">
             
             </a>
         </div>
@@ -117,10 +112,6 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -135,276 +126,40 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card">
-    
-    <div class="card-image">
-        <span  class="image is-7by1">
-            <img class="thumbnail" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2538191405,1268730134&amp;fm=26&amp;gp=0.jpg" alt="Hexo框架实现个人博客">
-        </span>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-04T08:59:12.000Z">2019-07-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/课程/">课程</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 489 个字)
-                </span>
-                
-                
-                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
-                    <i class="far fa-eye"></i>
-                    <span id="busuanzi_value_page_pv">0</span>次访问
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                Hexo框架实现个人博客
-            
-        </h1>
-        <div class="content">
-            <h3 id="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具"><a href="#本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具" class="headerlink" title="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具"></a>本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具</h3><a id="more"></a>
 
-<hr>
-<p>本文参考自B站优秀up主的视频：<a href="https://www.bilibili.com/video/av44544186">https://www.bilibili.com/video/av44544186</a></p>
-<h2 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h2><ol>
-<li>安装node.js<ul>
-<li>查看nodejs和npm版本</li>
-</ul>
-</li>
-<li>安装cnpm<ul>
-<li>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a></li>
-</ul>
-</li>
-<li>安装hexo<ul>
-<li>cnpm install -g hexo-cli</li>
-<li>验证hexo（hexo -v）</li>
-</ul>
-</li>
-<li>在目录下建立博客文件夹，同时cd进目录</li>
-<li>安装git</li>
-<li>创建架构<ul>
-<li>hexo init</li>
-</ul>
-</li>
-<li>开始本地调试<ul>
-<li>hexo s</li>
-</ul>
-</li>
-<li>创建博文<ul>
-<li>hexo new “我的第一篇博文”</li>
-<li>文章会自动生成在/source/_post目录下</li>
-</ul>
-</li>
-<li>清理并生成<ul>
-<li>hexo clean</li>
-<li>hexo g</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="远端部署"><a href="#远端部署" class="headerlink" title="远端部署"></a>远端部署</h2><ol>
-<li><p>登陆GitHub并新建仓库</p>
-<ul>
-<li>仓库名为”用户名.github.io”</li>
-<li>创建</li>
-</ul>
-</li>
-<li><p>在博客目录下安装git插件</p>
-<ul>
-<li>cnpm install –save hexo-deployer-git</li>
-</ul>
-</li>
-<li><p>设置_config.yml</p>
-<ul>
-<li><p>在Deployment下的type: 后加上git（注意！type:和git间有一空格）</p>
-</li>
-<li><p>在type项下一行加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repo: 仓库链接</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下一行加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ol>
-<ol start="4">
-<li><p>设置git</p>
-<ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>部署到远端</p>
-<ul>
-<li>hexo d</li>
-<li>登陆github</li>
-</ul>
-</li>
-<li><p><strong>大功告成！！！</strong></p>
-<ul>
-<li>仓库名.github.io</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="主题更换"><a href="#主题更换" class="headerlink" title="主题更换"></a>主题更换</h2><ol>
-<li><p>下载zip包解压在themes文件夹下或git clone下来</p>
-</li>
-<li><p>在博客目录中更改</p>
-<ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: 主题名（默认是landscape）</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ol>
-<ol start="3">
-<li><p>清理并生成</p>
-<ul>
-<li>hexo clean</li>
-<li>hexo g</li>
-</ul>
-</li>
-<li><p>调试并部署</p>
-</li>
-</ol>
-<hr>
-<h2 id="进阶部分（域名更改）"><a href="#进阶部分（域名更改）" class="headerlink" title="进阶部分（域名更改）"></a>进阶部分（域名更改）</h2><h2 id="嫌xxx-github-com太丑了？花钱买一个域名！"><a href="#嫌xxx-github-com太丑了？花钱买一个域名！" class="headerlink" title="嫌xxx.github.com太丑了？花钱买一个域名！"></a>嫌xxx.github.com太丑了？花钱买一个域名！</h2><ol>
-<li><p>ping你的个人博客（xxx.github.io），拿到IP地址后复制下来</p>
-</li>
-<li><p>对你的域名进行管理</p>
-<ul>
-<li><p>添加解析</p>
-</li>
-<li><table>
-<thead>
-<tr>
-<th align="center">记录类型</th>
-<th align="center">主机记录</th>
-<th align="center">解析线路</th>
-<th align="center">记录值</th>
-<th align="center">TTL值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">CNAME</td>
-<td align="center">www</td>
-<td align="center">默认</td>
-<td align="center">xxx.github.io</td>
-<td align="center">10分钟</td>
-</tr>
-<tr>
-<td align="center">A</td>
-<td align="center">@</td>
-<td align="center">默认</td>
-<td align="center">IP地址</td>
-<td align="center">10分钟</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-</li>
-</ol>
-<ol start="3">
-<li><p>最后一步</p>
-<ul>
-<li>到github项目中</li>
-<li>找到Github Pages一栏</li>
-<li>在Custom Domain填上你的域名并保存（注意：域名指”xxx.cn”等等）</li>
-<li>等待十分钟，开始愉快的玩耍</li>
-</ul>
-</li>
-</ol>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Github/">Github</a>, <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>, <a class="has-link-grey -link" href="/tags/Node-js/">Node.js</a>, <a class="has-link-grey -link" href="/tags/已授课/">已授课</a>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="social-share"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
-<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
-        
-    </div>
-</div>
-
-
-
-<div class="card">
+<div class="card widget">
     <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
+        <h3 class="tag is-link">
+        二月 2020
+        </h3>
+        <div class="timeline">
+        
+            <article class="media">
                 
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/IMG_5881.JPG" alt="支付宝"></div>
-</a>
-
+                <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享/" class="media-left">
+                    <p class="image is-64x64">
+                        <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与客户端搭建经验分享（一）">
+                    </p>
+                </a>
                 
-                
-<a class="button is-success donate">
-    <span class="icon is-small">
-        <i class="fab fa-weixin"></i>
-    </span>
-    <span>微信</span>
-    <div class="qrcode"><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/wechatpay.jpg" alt="微信"></div>
-</a>
-
-                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-02-05T06:35:16.000Z">2020-02-05</time>
+                        <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Trojan的服务端与客户端搭建经验分享（一）</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/categories/代理/">代理</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
         </div>
-    </div>
-</div>
-
-
-
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/07/30/黑苹果装机WriteUp/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">黑苹果装机WriteUp</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/04/Reverse逆向工程/">
-                <span class="level-item">Reverse逆向工程</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
     </div>
 </div>
 
@@ -535,42 +290,6 @@
 </div>
     
         
-
-    <div class="card widget" id="toc">
-        <div class="card-content">
-            <div class="menu">
-                <h3 class="menu-label">
-                    目录
-                </h3>
-                <ul class="menu-list"><ul class="menu-list"><li>
-        <a class="is-flex" href="#本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具">
-        <span class="has-mr-6">1.1</span>
-        <span>本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具</span>
-        </a></li></ul><li>
-        <a class="is-flex" href="#本地调试">
-        <span class="has-mr-6">2</span>
-        <span>本地调试</span>
-        </a></li><li>
-        <a class="is-flex" href="#远端部署">
-        <span class="has-mr-6">3</span>
-        <span>远端部署</span>
-        </a></li><li>
-        <a class="is-flex" href="#主题更换">
-        <span class="has-mr-6">4</span>
-        <span>主题更换</span>
-        </a></li><li>
-        <a class="is-flex" href="#进阶部分（域名更改）">
-        <span class="has-mr-6">5</span>
-        <span>进阶部分（域名更改）</span>
-        </a></li><li>
-        <a class="is-flex" href="#嫌xxx-github-com太丑了？花钱买一个域名！">
-        <span class="has-mr-6">6</span>
-        <span>嫌xxx.github.com太丑了？花钱买一个域名！</span>
-        </a></li></ul>
-            </div>
-        </div>
-    </div>
-
     
         <div class="card widget">
     <div class="card-content">
@@ -1197,7 +916,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Hexo框架实现个人博客" height="28">
+                    <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Barry&#39;s Blog" height="28">
                 
                 </a>
                 <p class="is-size-7">

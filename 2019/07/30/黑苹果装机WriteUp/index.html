@@ -42,50 +42,34 @@
 
     
     
-    
-    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
-    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
 
     
     
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
-    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
 
     
     
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
 
-
     
     
     
     
-
 <link rel="stylesheet" href="/css/back-to-top.css">
 
-
-    
-    
-
     
     
     
     
-
     
     
-<link rel="stylesheet" href="/css/progressbar.css">
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
 <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-
     
-    
-    
-        <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    
-
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
 
 
@@ -125,8 +109,7 @@
             <div class="navbar-end">
                 
                     
-                    
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/BarryAlanPan/BarryAlanPan.github.io">
+                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/BarryAlanPan/BarryAlanPan.github.io">
                         
                         <i class="fab fa-github"></i>
                         
@@ -151,7 +134,8 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
     
     <div class="card-image">
         <span  class="image is-7by1">
@@ -204,25 +188,25 @@
 <p>网卡：瑞昱 RTL8168/8111/8112 Gigabit Ethernet Controller / 蓝天(CLEVO)</p>
 </blockquote>
 <h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>​    开始装机，这款神舟用的蓝天准系统 公模，所以拆完D面就直接找到了多出的M.2接口</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6082.JPG" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6082.JPG" alt=""></p>
 <blockquote>
 <p>D面大体就是这个亚子</p>
 </blockquote>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6073.JPG" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6073.JPG" alt=""></p>
 <blockquote>
 <p>如图，左边有一个空闲的M.2插槽</p>
 </blockquote>
 <p>​    然而问题来了，我拿手边一个空闲的SSD试了一下发现接口对不上，在查阅后发现了问题，原来是因为M.2接口也分Socket2和Socket3，而他们的区别也不止在支持的协议上，还有他们的接口形状。</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6080.PNG" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6080.PNG" alt=""></p>
 <blockquote>
 <p>图示为2和3明显的接口区别，购买时千万不要踩坑</p>
 </blockquote>
 <p>​    观察完了插槽和接口还不够，我拨打了神舟客服询问了该拓展插槽支持的协议，惊奇的发现不支持NVMe，只支持SATA和PCIe，最终我只得放弃三星的高速SSD，选择了Intel的稳定且价格较低的500G SSD。</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6074.PNG" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6074.PNG" alt=""></p>
 <p>​    然后就是坐等到货的漫长时光啦，Day1 END。。。</p>
 <hr>
 <h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><p>​    今天算是工程中最重要的步骤之一，我要检查是否每个硬件都有其对应的apple原生驱动，首先来到声卡，这很明显是一块板载的ALC899声卡，我查了下，竟恰好有托管在github上的项目专门针对ALC899在MacOS中的原生高音质输出进行体现和维护</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/github01.png" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/github01.png" alt=""></p>
 <blockquote>
 <p>Github中的项目</p>
 </blockquote>
@@ -231,42 +215,42 @@
 <p>​    Day2 END</p>
 <hr>
 <h2 id="Day3"><a href="#Day3" class="headerlink" title="Day3"></a>Day3</h2><p>​    硬盘取回家前，先将系统包（包内含用于EFI恢复的PE系统、Clover引导和苹果系统安装程序）烧录进U盘</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_46.jpg" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_46.jpg" alt=""></p>
 <blockquote>
 <p>ESP分区内的EFI为Clover引导文件夹</p>
 </blockquote>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_39.jpg" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_39.jpg" alt=""></p>
 <blockquote>
 <p>烧录完后的U盘存储结构</p>
 </blockquote>
 <p>​    我们已经确认了ESP分区为存放Clover引导的地方，PE分区显然是PE系统，而5.77GB的分区我们可以猜测就是MacOS的安装包存放位置</p>
 <p>​    下面就进入到装SSD环节</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_3d.jpg" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_3d.jpg" alt=""></p>
 <blockquote>
 <p>可以明显的看到神舟原厂并没有给配M.2螺丝</p>
 </blockquote>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_48.jpg" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_48.jpg" alt=""></p>
 <blockquote>
 <p>而螺丝的短小超出了我的想象</p>
 </blockquote>
 <p>​    最后只得利用我所能找到最短且口径相同的螺丝代替，SSD仍存在松动，这也是我不得不吐槽神舟的地方，盒子里不给配螺丝，扩展位也不给螺丝，非常不方便加装。</p>
 <p>​    烧录完成后我重新插拔U盘并进行重启，在开机页面F2进入BIOS页面，选择通过USB启动，成功的进入了Clover引导页面，然而迎来的却是更大的问题</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_26.jpg" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_26.jpg" alt=""></p>
 <blockquote>
 <p>Clover只能识别Windows系统，却识别不到安装包</p>
 </blockquote>
 <p>​    最终尝试N次后无果，确认是镜像出了问题，立即换了网站下载镜像并重复以上步骤，进入Clover页面终于看到了安装包选项，接下来是更头疼的问题</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_30.jpg" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_30.jpg" alt=""></p>
 <blockquote>
 <p>滚代码时屏幕出现🚫符号</p>
 </blockquote>
 <p>​    在查阅CSDN和简书中的类似问题后发现，一切有关🚫的问题都指向了“Couldn’t allocate memory”这个Error，翻译成中文就是无法分配内存，而这只有在Mac系统下的Clover Configure中设置EFI才能解决，也就是说在当前情况下这个问题是无解的，最后只得借助网上已经配好的EFI碰运气，终于在更换了一个类似机型的config.plist文件后进入了安装页面（具体解决原理会在后面讲到）</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_38.jpg" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_38.jpg" alt=""></p>
 <blockquote>
 <p>一开始尝试更改启动选项为AHCI，然而没有效果</p>
 </blockquote>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_41.jpg" alt></p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_3a.jpg" alt></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_41.jpg" alt=""></p>
+<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_3a.jpg" alt=""></p>
 <blockquote>
 <p>⬆️成功进入安装页面后的成就感（虽然当时的EFI是抄来的）</p>
 </blockquote>
@@ -392,9 +376,11 @@
                     <p class="heading">
                         文章
                     </p>
-                    <p class="title has-text-weight-normal">
-                        4
-                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            5
+                        </p>
+                    </a>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
@@ -402,9 +388,11 @@
                     <p class="heading">
                         分类
                     </p>
-                    <p class="title has-text-weight-normal">
-                        3
-                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            4
+                        </p>
+                    </a>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
@@ -412,49 +400,53 @@
                     <p class="heading">
                         标签
                     </p>
-                    <p class="title has-text-weight-normal">
-                        11
-                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            13
+                        </p>
+                    </a>
                 </div>
             </div>
         </nav>
+        
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/BarryAlanPan" target="_blank">
+            <a class="level-item button is-link is-rounded" href="https://github.com/BarryAlanPan" target="_blank" rel="noopener">
                 关注我</a>
         </div>
         
         
+        
         <div class="level is-mobile">
             
-            <a class="level-item button is-white is-marginless" target="_blank"
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
                 title="Github" href="https://github.com/BarryAlanPan">
                 
                 <i class="fab fa-github"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank"
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
                 title="QQ" href="https://user.qzone.qq.com/1504407704/main">
                 
                 <i class="fab fa-qq"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank"
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
                 title="WeChat" href="https://weixin.qq.com/">
                 
                 <i class="fab fa-weixin"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank"
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
                 title="Steam" href="http://steamcommunity.com/id/panbarryal/">
                 
                 <i class="fab fa-steam"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank"
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
                 title="RSS" href="/">
                 
                 <i class="fas fa-rss"></i>
@@ -467,13 +459,14 @@
 </div>
     
         
-<div class="card widget" id="toc">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                目录
-            </h3>
-            <ul class="menu-list"><li>
+
+    <div class="card widget" id="toc">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    目录
+                </h3>
+                <ul class="menu-list"><li>
         <a class="is-flex" href="#写在开头">
         <span class="has-mr-6">1</span>
         <span>写在开头</span>
@@ -498,14 +491,12 @@
         <span class="has-mr-6">6</span>
         <span>Day4</span>
         </a></li></ul>
+            </div>
         </div>
     </div>
-</div>
 
     
-        
-
-<div class="card widget">
+        <div class="card widget">
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
@@ -514,7 +505,7 @@
         <ul class="menu-list">
         
             <li>
-                <a class="level is-mobile" href="https://wang66.top/" target="_blank">
+                <a class="level is-mobile" href="https://wang66.top/" target="_blank" rel="noopener">
                     <span class="level-left">
                         <span class="level-item">W66</span>
                     </span>
@@ -525,7 +516,7 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://www.tutugreen.com/" target="_blank">
+                <a class="level is-mobile" href="https://www.tutugreen.com/" target="_blank" rel="noopener">
                     <span class="level-left">
                         <span class="level-item">YaMing Station</span>
                     </span>
@@ -540,7 +531,6 @@
     </div>
 </div>
 
-
     
         
 <div class="card widget">
@@ -554,6 +544,14 @@
         <a class="level is-marginless" href="/categories/Write-Up/">
             <span class="level-start">
                 <span class="level-item">Write Up</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/代理/">
+            <span class="level-start">
+                <span class="level-item">代理</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -580,26 +578,42 @@
     </div>
 </div>
     
-        
-<div class="card widget">
+        <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/复旦课程/" style="font-size: 10px;">复旦课程</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
+        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 10px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/复旦课程/" style="font-size: 10px;">复旦课程</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 10px;">计算机</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
     </div>
 </div>
-
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
         
-            
-<div class="card widget">
+            <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与客户端搭建经验分享（一）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-05T06:35:16.000Z">2020-02-05</time></div>
+                    <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Trojan的服务端与客户端搭建经验分享（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/代理/">代理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -679,7 +693,6 @@
         
     </div>
 </div>
-
         
             <div class="card widget">
     <div class="card-content">
@@ -688,6 +701,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/08/">
@@ -753,6 +777,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Trojan/">
+                        <span class="tag">Trojan</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Xmind/">
                         <span class="tag">Xmind</span>
                         <span class="tag is-grey">1</span>
@@ -783,6 +814,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/装机/">
                         <span class="tag">装机</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/计算机/">
+                        <span class="tag">计算机</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -817,12 +855,30 @@
 
 <div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
-        
-<div class="card widget">
+        <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与客户端搭建经验分享（一）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-05T06:35:16.000Z">2020-02-05</time></div>
+                    <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Trojan的服务端与客户端搭建经验分享（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/代理/">代理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -902,7 +958,6 @@
         
     </div>
 </div>
-
     
         <div class="card widget">
     <div class="card-content">
@@ -911,6 +966,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/08/">
@@ -976,6 +1042,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Trojan/">
+                        <span class="tag">Trojan</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Xmind/">
                         <span class="tag">Xmind</span>
                         <span class="tag is-grey">1</span>
@@ -1006,6 +1079,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/装机/">
                         <span class="tag">装机</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/计算机/">
+                        <span class="tag">计算机</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1045,9 +1125,9 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 BarryPan&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
-                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                &copy; 2020 BarryPan&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
                 
                 <br>
                 <span id="busuanzi_container_site_uv">
@@ -1060,9 +1140,8 @@
             
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
                 
-                
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
                         
                         <i class="fab fa-creative-commons"></i>
                         
@@ -1070,7 +1149,7 @@
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
                         
                         <i class="fab fa-creative-commons-by"></i>
                         
@@ -1078,7 +1157,7 @@
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
                         
                         <i class="fab fa-github"></i>
                         
@@ -1095,8 +1174,13 @@
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
 <script>moment.locale("zh-CN");</script>
 
+
 <script>
 var IcarusThemeSettings = {
+    site: {
+        url: 'http://yoursite.com',
+        external_link: {"enable":true,"exclude":[]}
+    },
     article: {
         highlight: {
             clipboard: true,
@@ -1107,26 +1191,21 @@ var IcarusThemeSettings = {
 </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
 
 
 
-    
-    
-    
-    <script src="/js/animation.js"></script>
-    
 
-    
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
-    <script src="/js/gallery.js" defer></script>
-    
 
-    
-    
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
 
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
@@ -1146,8 +1225,6 @@ var IcarusThemeSettings = {
 </script>
 
 
-    
-    
 <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -1171,8 +1248,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-    
-    
 
 <a id="back-to-top" title="回到顶端" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
@@ -1180,21 +1255,16 @@ document.addEventListener('DOMContentLoaded', function () {
 <script src="/js/back-to-top.js" defer></script>
 
 
-    
-    
 
-    
-    
-    
-    
 
-    
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
 
 
 <script src="/js/main.js" defer></script>

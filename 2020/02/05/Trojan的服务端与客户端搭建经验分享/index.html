@@ -7,23 +7,23 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Hexo框架实现个人博客 - Barry&#39;s Blog</title>
+<title>Trojan的服务端与客户端搭建经验分享（一） - Barry&#39;s Blog</title>
 
 
-    <meta name="description" content="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具">
-<meta name="keywords" content="Hexo,已授课,Node.js,Github">
+    <meta name="description" content="引言​    上网查询外国论文以及报错信息如今已成为计算机从业者工作和学习过程中不可避免的一部分。随着流量分析技术的日益改善，如今的酸酸乳等代理方式已不再是最好的解决方案。">
+<meta name="keywords" content="Trojan,计算机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo框架实现个人博客">
-<meta property="og:url" content="http://yoursite.com/2019/07/04/Hexo框架实现个人博客/index.html">
+<meta property="og:title" content="Trojan的服务端与客户端搭建经验分享（一）">
+<meta property="og:url" content="http://yoursite.com/2020/02/05/Trojan的服务端与客户端搭建经验分享/index.html">
 <meta property="og:site_name" content="Barry&#39;s Blog">
-<meta property="og:description" content="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具">
+<meta property="og:description" content="引言​    上网查询外国论文以及报错信息如今已成为计算机从业者工作和学习过程中不可避免的一部分。随着流量分析技术的日益改善，如今的酸酸乳等代理方式已不再是最好的解决方案。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2538191405,1268730134&fm=26&gp=0.jpg">
-<meta property="og:updated_time" content="2019-08-14T12:47:09.000Z">
+<meta property="og:image" content="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png">
+<meta property="og:updated_time" content="2020-02-05T07:05:42.557Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo框架实现个人博客">
-<meta name="twitter:description" content="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具">
-<meta name="twitter:image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2538191405,1268730134&fm=26&gp=0.jpg">
+<meta name="twitter:title" content="Trojan的服务端与客户端搭建经验分享（一）">
+<meta name="twitter:description" content="引言​    上网查询外国论文以及报错信息如今已成为计算机从业者工作和学习过程中不可避免的一部分。随着流量分析技术的日益改善，如今的酸酸乳等代理方式已不再是最好的解决方案。">
+<meta name="twitter:image" content="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png">
 
 
 
@@ -81,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Hexo框架实现个人博客" height="28">
+                <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Trojan的服务端与客户端搭建经验分享（一）" height="28">
             
             </a>
         </div>
@@ -139,7 +139,7 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2538191405,1268730134&amp;fm=26&amp;gp=0.jpg" alt="Hexo框架实现个人博客">
+            <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与客户端搭建经验分享（一）">
         </span>
     </div>
     
@@ -147,17 +147,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-04T08:59:12.000Z">2019-07-04</time>
+                <time class="level-item has-text-grey" datetime="2020-02-05T06:35:16.000Z">2020-02-05</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/课程/">课程</a>
+                <a class="has-link-grey -link" href="/categories/代理/">代理</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 489 个字)
+                    8 分钟 读完 (大约 1264 个字)
                 </span>
                 
                 
@@ -171,168 +171,112 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Hexo框架实现个人博客
+                Trojan的服务端与客户端搭建经验分享（一）
             
         </h1>
         <div class="content">
-            <h3 id="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具"><a href="#本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具" class="headerlink" title="本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具"></a>本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具</h3><a id="more"></a>
+            <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>​    上网查询外国论文以及报错信息如今已成为计算机从业者工作和学习过程中不可避免的一部分。随着流量分析技术的日益改善，如今的酸酸乳等代理方式已不再是最好的解决方案。</p>
+<a id="more"></a>
 
-<hr>
-<p>本文参考自B站优秀up主的视频：<a href="https://www.bilibili.com/video/av44544186">https://www.bilibili.com/video/av44544186</a></p>
-<h2 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h2><ol>
-<li>安装node.js<ul>
-<li>查看nodejs和npm版本</li>
-</ul>
+<blockquote>
+<p>⚠️    本文仅提供给有独立思考能力的计算机行业从业或学习者用于学习之用，本文将严格遵守《中华人民共和国网络安全法》，拥护我国社会主义核心价值观，不允许被任何人用于非法活动，希望读者严格管理上网与思考习惯，做遵纪守法且勤奋刻苦的中国人！</p>
+<p>⚠️    如果您不具备上述条件，请关闭此文章，谢谢您的配合！</p>
+</blockquote>
+<h2 id="第一部分-Trojan的益处"><a href="#第一部分-Trojan的益处" class="headerlink" title="第一部分 Trojan的益处"></a>第一部分 Trojan的益处</h2><h3 id="与其他协议的不同之处"><a href="#与其他协议的不同之处" class="headerlink" title="与其他协议的不同之处"></a>与其他协议的不同之处</h3><p>​    传统的代理协议(SS/V2ray)在设计之初仅考虑到了传输安全性和可行性，而这些协议在面对GFW的检测时有个共同的缺点——特征明显，由于种种原因，这些数据包的体积都会因为体积过大，与传统HTTP/HTTPS包差异大而容易被检测，最后导致端口被Ban。</p>
+<p>​    而Trojan的诞生正是为了弥补这些协议的缺陷，同时在速度上不会落后(速度测试数据皆从网络获取)。Trojan通过将传输数据包伪装成HTTPS数据包，同时整合Nginx服务端，做到了伪装成普通HTTPS网站访问的作用。对Nginx的支持也让我们能将静态博客通过Git的钩子进行远程部署。</p>
+<h3 id="Trojan的绕过原理"><a href="#Trojan的绕过原理" class="headerlink" title="Trojan的绕过原理"></a>Trojan的绕过原理</h3><p>​    和传统的代理协议基本相同，只是对数据包和服务端、客户端重新设计，性能方面从参考视频来看不输其他协议。Trojan的客户端支持Socks5正向代理，让我们在本地网络策略上的选择更多。</p>
+<h2 id="如何搭建"><a href="#如何搭建" class="headerlink" title="如何搭建"></a>如何搭建</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li><p>一台中国香港/中国台湾/海外VPS</p>
 </li>
-<li>安装cnpm<ul>
-<li>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a></li>
-</ul>
+<li><p>域名申请与绑定</p>
+<p>作者通过是阿里云申请的域名。需要先在域名管理台中设置域名解析到A记录，解析到我们VPS的IP地址</p>
 </li>
-<li>安装hexo<ul>
-<li>cnpm install -g hexo-cli</li>
-<li>验证hexo（hexo -v）</li>
 </ul>
-</li>
-<li>在目录下建立博客文件夹，同时cd进目录</li>
-<li>安装git</li>
-<li>创建架构<ul>
-<li>hexo init</li>
-</ul>
-</li>
-<li>开始本地调试<ul>
-<li>hexo s</li>
-</ul>
-</li>
-<li>创建博文<ul>
-<li>hexo new “我的第一篇博文”</li>
-<li>文章会自动生成在/source/_post目录下</li>
-</ul>
-</li>
-<li>清理并生成<ul>
-<li>hexo clean</li>
-<li>hexo g</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="远端部署"><a href="#远端部署" class="headerlink" title="远端部署"></a>远端部署</h2><ol>
-<li><p>登陆GitHub并新建仓库</p>
+<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/rzou0.png" alt=""></p>
+<blockquote>
+<p>记录值填写VPS的IP地址，不同控制台的原理基本相同</p>
+</blockquote>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>​    作者使用的VPS操作系统是CentOS 7</p>
 <ul>
-<li>仓库名为”用户名.github.io”</li>
-<li>创建</li>
+<li><p>安装好 curl，若是有此环境，请跳过</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update -y &amp;&amp; apt-get install curl -y    <span class="comment">##Ubuntu/Debian 系统安装 Curl 方法</span></span><br><span class="line">yum update -y &amp;&amp; yum install curl -y            <span class="comment">##Centos 系统安装 Curl 方法</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有些 VPS 需要安装 XZ 压缩工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install xz-utils   <span class="comment">#Debian/Ubuntu 安装 XZ 压缩工具命令</span></span><br><span class="line">yum install xz    <span class="comment">#CentOS 安装 XZ 压缩工具</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Trojan 一键脚本下载并执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://github.com/V2RaySSR/Trojan/raw/master/Trojan.sh)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开脚本如下图</p>
+<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/qzvmv.png" alt=""></p>
+</li>
 </ul>
-</li>
-<li><p>在博客目录下安装git插件</p>
-<ul>
-<li>cnpm install –save hexo-deployer-git</li>
-</ul>
-</li>
-<li><p>设置_config.yml</p>
-<ul>
-<li><p>在Deployment下的type: 后加上git（注意！type:和git间有一空格）</p>
-</li>
-<li><p>在type项下一行加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repo: 仓库链接</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下一行加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>现在是简单安装阶段，选择一键安装Trojan即可</p>
+</blockquote>
+<p>​    安装过程会要求输入绑定的域名，我们直接输入准备阶段绑定的域名即可，脚本会自动为我们申请证书，并自动续签</p>
+<h3 id="简单设置"><a href="#简单设置" class="headerlink" title="简单设置"></a>简单设置</h3><ul>
+<li><p>设置密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/src/trojan/server.conf</span><br></pre></td></tr></table></figure>
 
+<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/vb83a.png" alt=""></p>
+</li>
+</ul>
+<blockquote>
+<p>通过vim编辑我们的服务端设置，这里先更改密码，高级选项会在后面讲到(随缘更新)</p>
+</blockquote>
+<ul>
+<li><p>重新加载服务端</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart trojan</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>成功</p>
+<p>​    你成功在服务器安装Trojan并且可通过443端口连接代理，同时可以访问域名，会出现预设的HTML页面</p>
+</li>
+</ul>
+<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><h3 id="HomeBrew-X-Trojan"><a href="#HomeBrew-X-Trojan" class="headerlink" title="HomeBrew X Trojan"></a>HomeBrew X Trojan</h3><ul>
+<li>如果你是MacOS用户，你可以通过Homebrew安装Trojan客户端</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap trojan-gfw/homebrew-trojan</span><br><span class="line">brew install trojan</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>安装完成后通过services查看</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services list</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-</li>
-</ol>
-<ol start="4">
-<li><p>设置git</p>
+<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/xg02k.png" alt=""></p>
 <ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-</li>
+<li>打开Plist文件，可以看到我们的客户端设置文件位置</li>
 </ul>
-</li>
-<li><p>部署到远端</p>
+<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/lzzyf.png" alt=""></p>
 <ul>
-<li>hexo d</li>
-<li>登陆github</li>
+<li>打开设置文件进行编辑</li>
 </ul>
-</li>
-<li><p><strong>大功告成！！！</strong></p>
+<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/35wl2.png" alt=""></p>
+<blockquote>
+<p>这里我们需要更改服务器的域名，服务端密码和Sock5代理端口(默认1080，想改就改)</p>
+</blockquote>
 <ul>
-<li>仓库名.github.io</li>
+<li>在<strong>本地</strong>重启Trojan</li>
 </ul>
-</li>
-</ol>
-<hr>
-<h2 id="主题更换"><a href="#主题更换" class="headerlink" title="主题更换"></a>主题更换</h2><ol>
-<li><p>下载zip包解压在themes文件夹下或git clone下来</p>
-</li>
-<li><p>在博客目录中更改</p>
-<ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: 主题名（默认是landscape）</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart trojan</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>在Safari/Chrome/Edge里进入代理设置</li>
+</ul>
+<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/v9rcw.png" alt=""></p>
+<blockquote>
+<p>端口改成之前设置的Socks开放端口</p>
+</blockquote>
+<ul>
+<li>访问谷歌</li>
+</ul>
+<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/kxwfl.png" alt=""></p>
+<blockquote>
+<p>🍺 恭喜你完成第一步安装，详细的本地分流请看下回分解</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@本文不可被转载</span><br><span class="line">@Created by BarryPan in February/2020</span><br></pre></td></tr></table></figure>
 
-
-</li>
-</ul>
-</li>
-</ol>
-<ol start="3">
-<li><p>清理并生成</p>
-<ul>
-<li>hexo clean</li>
-<li>hexo g</li>
-</ul>
-</li>
-<li><p>调试并部署</p>
-</li>
-</ol>
-<hr>
-<h2 id="进阶部分（域名更改）"><a href="#进阶部分（域名更改）" class="headerlink" title="进阶部分（域名更改）"></a>进阶部分（域名更改）</h2><h2 id="嫌xxx-github-com太丑了？花钱买一个域名！"><a href="#嫌xxx-github-com太丑了？花钱买一个域名！" class="headerlink" title="嫌xxx.github.com太丑了？花钱买一个域名！"></a>嫌xxx.github.com太丑了？花钱买一个域名！</h2><ol>
-<li><p>ping你的个人博客（xxx.github.io），拿到IP地址后复制下来</p>
-</li>
-<li><p>对你的域名进行管理</p>
-<ul>
-<li><p>添加解析</p>
-</li>
-<li><table>
-<thead>
-<tr>
-<th align="center">记录类型</th>
-<th align="center">主机记录</th>
-<th align="center">解析线路</th>
-<th align="center">记录值</th>
-<th align="center">TTL值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">CNAME</td>
-<td align="center">www</td>
-<td align="center">默认</td>
-<td align="center">xxx.github.io</td>
-<td align="center">10分钟</td>
-</tr>
-<tr>
-<td align="center">A</td>
-<td align="center">@</td>
-<td align="center">默认</td>
-<td align="center">IP地址</td>
-<td align="center">10分钟</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-</li>
-</ol>
-<ol start="3">
-<li><p>最后一步</p>
-<ul>
-<li>到github项目中</li>
-<li>找到Github Pages一栏</li>
-<li>在Custom Domain填上你的域名并保存（注意：域名指”xxx.cn”等等）</li>
-<li>等待十分钟，开始愉快的玩耍</li>
-</ul>
-</li>
-</ol>
+<p>​        ⬇️如果文章对你有用，可以请作者喝杯☕️</p>
 
         </div>
         
@@ -340,7 +284,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Github/">Github</a>, <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>, <a class="has-link-grey -link" href="/tags/Node-js/">Node.js</a>, <a class="has-link-grey -link" href="/tags/已授课/">已授课</a>
+                    <a class="has-link-grey -link" href="/tags/Trojan/">Trojan</a>, <a class="has-link-grey -link" href="/tags/计算机/">计算机</a>
                 </div>
             </div>
         </div>
@@ -390,17 +334,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/07/30/黑苹果装机WriteUp/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">黑苹果装机WriteUp</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/04/Reverse逆向工程/">
-                <span class="level-item">Reverse逆向工程</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/14/学习方法总结/">
+                <span class="level-item">学习方法总结</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -542,31 +479,47 @@
                 <h3 class="menu-label">
                     目录
                 </h3>
-                <ul class="menu-list"><ul class="menu-list"><li>
-        <a class="is-flex" href="#本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具">
-        <span class="has-mr-6">1.1</span>
-        <span>本文志在教会同学们动手搭建个人博客，作为很好的知识储备工具</span>
-        </a></li></ul><li>
-        <a class="is-flex" href="#本地调试">
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#引言">
+        <span class="has-mr-6">1</span>
+        <span>引言</span>
+        </a></li><li>
+        <a class="is-flex" href="#第一部分-Trojan的益处">
         <span class="has-mr-6">2</span>
-        <span>本地调试</span>
+        <span>第一部分 Trojan的益处</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#与其他协议的不同之处">
+        <span class="has-mr-6">2.1</span>
+        <span>与其他协议的不同之处</span>
         </a></li><li>
-        <a class="is-flex" href="#远端部署">
+        <a class="is-flex" href="#Trojan的绕过原理">
+        <span class="has-mr-6">2.2</span>
+        <span>Trojan的绕过原理</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#如何搭建">
         <span class="has-mr-6">3</span>
-        <span>远端部署</span>
+        <span>如何搭建</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#准备工作">
+        <span class="has-mr-6">3.1</span>
+        <span>准备工作</span>
         </a></li><li>
-        <a class="is-flex" href="#主题更换">
+        <a class="is-flex" href="#安装">
+        <span class="has-mr-6">3.2</span>
+        <span>安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#简单设置">
+        <span class="has-mr-6">3.3</span>
+        <span>简单设置</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#客户端">
         <span class="has-mr-6">4</span>
-        <span>主题更换</span>
-        </a></li><li>
-        <a class="is-flex" href="#进阶部分（域名更改）">
-        <span class="has-mr-6">5</span>
-        <span>进阶部分（域名更改）</span>
-        </a></li><li>
-        <a class="is-flex" href="#嫌xxx-github-com太丑了？花钱买一个域名！">
-        <span class="has-mr-6">6</span>
-        <span>嫌xxx.github.com太丑了？花钱买一个域名！</span>
-        </a></li></ul>
+        <span>客户端</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#HomeBrew-X-Trojan">
+        <span class="has-mr-6">4.1</span>
+        <span>HomeBrew X Trojan</span>
+        </a></li></ul></li></ul>
             </div>
         </div>
     </div>
@@ -1197,7 +1150,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Hexo框架实现个人博客" height="28">
+                    <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Trojan的服务端与客户端搭建经验分享（一）" height="28">
                 
                 </a>
                 <p class="is-size-7">
