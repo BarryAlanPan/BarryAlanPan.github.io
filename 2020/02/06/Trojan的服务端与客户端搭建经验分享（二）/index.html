@@ -19,7 +19,7 @@
 <meta property="og:description" content="⚠️    本文仅提供给有独立思考能力的计算机行业从业或学习者用于学习之用，本文将严格遵守《中华人民共和国网络安全法》，拥护我国社会主义核心价值观，不允许被任何人用于非法活动，希望读者严格管理上网与思考习惯，做遵纪守法且勤奋刻苦的中国人！ ⚠️    如果您不具备上述条件，请关闭此文章，谢谢您的配合！">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png">
-<meta property="og:updated_time" content="2020-02-06T07:08:54.548Z">
+<meta property="og:updated_time" content="2020-02-06T10:44:50.385Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Trojan的服务端与客户端搭建经验分享（二）">
 <meta name="twitter:description" content="⚠️    本文仅提供给有独立思考能力的计算机行业从业或学习者用于学习之用，本文将严格遵守《中华人民共和国网络安全法》，拥护我国社会主义核心价值观，不允许被任何人用于非法活动，希望读者严格管理上网与思考习惯，做遵纪守法且勤奋刻苦的中国人！ ⚠️    如果您不具备上述条件，请关闭此文章，谢谢您的配合！">
@@ -198,7 +198,7 @@
 <p>”</p>
 <p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/53vot.png" alt=""></p>
 <p>​    删除原来的.conf文件内容，将“更多配置”里所有内容复制下来粘贴到文件中</p>
-<img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/vo6pz.png" alt="image-20200206114349730" style="zoom: 33%;" />
+<img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/vo6pz.png" style="zoom: 33%;" />
 
 <p>​    把框内的内容更改成自己的配置(socks端口，分流细节)</p>
 <p>​    其中”Group”表示代理组，在多代理节点的情况下Mellow会根据高可用性来分辨该从代理组中哪个节点走流量。</p>
@@ -225,13 +225,13 @@
 <p>和Mellow的设置相比，V2rayU的设置并没有那么高端，只需简单几步该数据就好</p>
 </li>
 </ul>
-<img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/t61zl.png" alt="image-20200206145539533" style="zoom:50%;" />
+<img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/t61zl.png" style="zoom:50%;" />
 
 <blockquote>
 <p>注意这里用的是Socks协议，对应的环回地址(127.0.0.1)和Socks开的端口一定要正确</p>
 </blockquote>
 <p>​    打开PAC代理模式后别忘了浏览器里的Socks代理关了再去测试</p>
-<img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/kiigp.png" alt="image-20200206145918850" style="zoom:50%;" />
+<img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/kiigp.png" style="zoom:50%;" />
 
 <p>​    最后打开浏览器测试下连接</p>
 <p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/qw8jz.png" alt=""></p>
