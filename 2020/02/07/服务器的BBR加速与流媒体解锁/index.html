@@ -7,22 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Trojan的服务端与客户端搭建经验分享（一） - Barry&#39;s Blog</title>
+<title>服务器的BBR加速与流媒体解锁 - Barry&#39;s Blog</title>
 
 
-    <meta name="description" content="本文仅提供给有独立思考能力的计算机行业从业或学习者用于学习之用">
+    <meta name="description" content="提升速度⏩，增加功能🔨">
 <meta name="keywords" content="Trojan,计算机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Trojan的服务端与客户端搭建经验分享（一）">
-<meta property="og:url" content="http://yoursite.com/2020/02/05/Trojan的服务端与客户端搭建经验分享（一）/index.html">
+<meta property="og:title" content="服务器的BBR加速与流媒体解锁">
+<meta property="og:url" content="http://yoursite.com/2020/02/07/服务器的BBR加速与流媒体解锁/index.html">
 <meta property="og:site_name" content="Barry&#39;s Blog">
-<meta property="og:description" content="本文仅提供给有独立思考能力的计算机行业从业或学习者用于学习之用">
+<meta property="og:description" content="提升速度⏩，增加功能🔨">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png">
-<meta property="og:updated_time" content="2020-02-06T07:17:26.886Z">
+<meta property="og:updated_time" content="2020-02-07T05:36:30.366Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Trojan的服务端与客户端搭建经验分享（一）">
-<meta name="twitter:description" content="本文仅提供给有独立思考能力的计算机行业从业或学习者用于学习之用">
+<meta name="twitter:title" content="服务器的BBR加速与流媒体解锁">
+<meta name="twitter:description" content="提升速度⏩，增加功能🔨">
 <meta name="twitter:image" content="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png">
 
 
@@ -81,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Trojan的服务端与客户端搭建经验分享（一）" height="28">
+                <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="服务器的BBR加速与流媒体解锁" height="28">
             
             </a>
         </div>
@@ -139,7 +139,7 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与客户端搭建经验分享（一）">
+            <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
         </span>
     </div>
     
@@ -147,7 +147,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-05T06:35:16.000Z">2020-02-05</time>
+                <time class="level-item has-text-grey" datetime="2020-02-07T05:29:57.000Z">2020-02-07</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/笔记/">笔记</a>
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8 分钟 读完 (大约 1272 个字)
+                    4 分钟 读完 (大约 639 个字)
                 </span>
                 
                 
@@ -171,19 +171,61 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Trojan的服务端与客户端搭建经验分享（一）
+                服务器的BBR加速与流媒体解锁
             
         </h1>
         <div class="content">
-            <div id="hexo-blog-encrypt" data-wpm="密码错误，请联系管理员" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">请输入密码</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="d23994ec2886eb566ba5b5ac8c03de011bf816f1db34044e2136b3d43773934b">7a731f9f95ce45270bdff624cc998cbb014ef9391ac44dfd6f73696283ea0fff6a0604e000251ae8158f5618c672ff014714ea838520e1dfc5e7e06b04ef57d97d5d75524eaa65a354660f895563eea4cc7b04fd68fd68123779ab50a6cbd710e39b919cefddfe701daba3f449a90227965080b8971ccf61b02ff144e3479b10dc86e19d2492744777dd6131f44ea8f77711132a17a1dd84015fd2affd9785969c03e1abdec52729c5d92468143c94568777529748dd79ae3bf3968d7371b23d37afd1d0bfdd3a672e055665a374fd51b3063d2fa95946fde98af7eab58273f255638297fd9e239870806cac89f666f0cf0e92b6762053ec71044db678992d213149d241b2c66b299af575654408eaa94c5a1221f2ebd798f2d28089cbcb950c2ad6cde5e973542ea069dedbc5e67c93148bece15a10fe681319c6a6db2ec8243e6728bef600ceef25d1c6a6d53da590bbee37ad4baaa022a11692de31eb35e269cb716d74d69cbfc30155e0dd04e2b941d538c33b5bc9c05912697e517820dafc6722ff35a0bf68b396f7c85490ba3116d7474ccfcf2d3d6b7fad66e55c1e58ecd93d6a91c4b89883da04ef3923822f929d0941b2bc2fc715b907e1231a38425700caa78e1639c1901fc0e842036cf8370966522ef18932ea3cbd56a9ebfe857f96eb629cd062f42253297f8f6296a13fc1c33eff29554eb65d82dc81397d5664c11d89d9935a77f2b22857de3680249991e182dbf7a32421a171f4850bb4be33e22212cfebd425968fb3d448ab42274782721bdc1c2abbd5bfdb8910dd5a0def159eef9c93c456f77afc05f6e794b9c1cbbde904f400d0c5dfdea52568f3892aa2032001e657298e7e90dc6d4f3b89a66fb5cb9eb314bb12c42a7b15bafd991fadcfe2214ae66edbbfc0c8f0895629b3035c690db1458b560e0a8c42b95ba6328ae8c23e86621fc89e4c297d3559d152e8f26120a9fe2914b5b25403b1378dd76df4bfe41a6dcbdedc2ab7be72d64cce5135d8fa2b878eab362a4e0b5087bdd16b1a2924b080a41fe9bd11e288da8360f94625d14a12cd466fbd41f461bab37576dafdd3076f391c6df32b0a4e10a913fb71ecf67481cd3c56adbae8e99c67317cd646da65294e09f6ea3fefe947af228c5583673f9246839cf2d23184dc6ec721caa3d3cf757d55b4e415b829d8625ec676917e7730d8ec90dce8c5b8903885e375478e55520d6edf36c266c7840e18774480ba9ddbe675c7875d432d52fe9ec1afb2f31caba9035dd41ec03dc67c5f122bb77ee0a71c5fc4f22b8c8a91298db46aa09c531c3c578821708af1bfd8f902d063b2d446ca30cbb6cac8d47025021f52d6763dcdee84340b22c3f0a7dab1afb6ff9624edb76bf519a9a00bb8d68ab6c54d74317faf9f9bf4ca5deb500a92aff3e8547efba7c9dbf77cc37a162da5eef7f16a9984f589140a368137d18d5e98dba45fc3458bf43f1e18466732c4c3d2c4329c2df3586a393a56c261f991dee0a0344cc976cfa786a32431fc624d4911d2b034c10c628033baa4af18ed41464e9c70b2e493757ff83843622ce3fd013cb21d3fe6c4398e5e4a3e263d7f891d39a99e04dc5eefee9b13313a558d1771395b37e2c40b15a925a4b8c8b2ae59914b3ece7f0711cedbb46b8cb6a7e4d3d0aa838fdd0c0994147d680337a856565187a3e92c6be5b0cbdf8acddf52fafc1b8943bb8e5b32ba75a294462fb0b190b9b5b8720876d5925f2b90580aa634e8abef7ca3d02e269dbf15ff16246d3036b11f8f4367d5cedeb84a8c8e506fc5ad9f40a7ae4bccdd065b716a39f23b283e19bc43595445120e7c80a5c5d942aad08a034ebfcd54dd7e9d279a318da3b444b7d5a7e4804c2f35c377617f812d54a1ce059bf9076eec629cdadf670ea43eebdd6d8ef81c33fdf34202ecc013fa63918e3bd88279f4176f81b86d74c93ba49f07125726cf3c3232eeeafa126650b1d963a25712891ea400a2420488bf816c0375972c9883586c4891b9037042287b4f9d4912b2c14e65f8647485156bba49561d45f66f0196e2395bbf3c06ae240be77976d97b2eadd3d825c33dd77603ea9b804715b741062e0924455417b0f636a8f02dfba000ef2fdfdd685d4413a943fae96d9d79f2d6c8e49d297f979ebc0d2d828c9e5bda65b3aff1b97470182c3415b54a0ab051b8551fc929d2df65a7c86b98fa50857241cddb8b7d5c43b96839a6d1a73ca5032a4cbf167d147a8166a69a7dd460426ebba2d161bda1112f25dd7819a99c0568cf96c7ce8cea258583e04edc01768ebaf801fcfec340ac9ee03771912a8c3a640ee8b5cffd9d42f947b86a1a67761b31bbe67a8cf66d4595dc2b9d48b7c39940db73becc52074ed80c639367d1856f09d8274b3c77e95b14ccb63637b00767c30e2e350d1d9e17e2a0febbcc682b5046ac49e345babd6612c736af1f14db1362925835fbd6e95655ed2539ba0a9f265aa34cc3baf776b855224644f2dc01e5c1d0d2e76323684b52087cd83ca8296a3efe1a065d34862b10bb4cf030855b119c95484b718db700f0dc33dc62f427e12949c211184970cd531afc4025bccfb666361a0f8abb68a04fa0f2198e76d4f3be7c3abdc1a08fe170c2b20751f67590baa971acd80b53fe83785ddacf201f1c09e7410a430caa74243aabb3326d05e47a754e9c7065ec8d67637469b43e52a68177bbe44e688abaa062d5881ab25319a97801b814f18369b12d32fde62237b6ff37018d7d9e1dadf3c261e4f4ffc46301ddb06304ac983a27a2d8abdeff42c63392d5c90b096e798445caf4c8c3c14c72d0c24bef506d87663c0c3547e080294c4fbe7dbc590ce447b469dde5fefc80f49dc0f768d6745fe68b68f3a4833c0200d1b98c296bfd77db7ffadee6c16dd187befb0e79f6429d0d010e46ad2cad28037d79d51f282edd6efa128aabdbf938cb10b8152c5d2d8f23671ff98d6c85577fa6a0231633ab05e436c185f0048a0f6af6671d3a7bbb0f09da1d3bad45f8322016fa902ad68a91d42bc77b9de76698c46acebec67bd89233e5524d29461934a673631808d912d69c8f7d3776330388efad3999a5ddb140132b832ad126d2af698c243bd43552b279fa80a95ec5a937c6de9202685cb9a77f31536e0e1166763b33238912c816e6b43df45f18b87ce9faf846fea1473a9b3ded547bd49f76797fbf700c81f1101d0a5aad8b67bd9bc2ed3a5686c0d5e862f463fbd3a12739c82ec21de023e18f955925d03816e65d50ccb0fa2918479c39e6cdabdd11f93155066f8f36558f3989b93c942a2fd83e9b5c454819f6488a38e4072082d1b5ab6eb0419b973c63519377e46979cf9767c6fb8d3b0d4ca305dc7c350bcd696ddb91ece6d01e514b157da242c1fcc0e694f46757e1d875828ed3869ad7189ba0f59589b810509689e742cefc55121e3277832c2649764435d0664fcb28be97bbf781b1176ca3544b225e9c19286579fa4d40dd8d4df98590f0c7d0073ee7b5bc16e1a86e742994731cd5962bc7c185e2e6c75e2cf4dd7834c1836e220b0952bd42f1caa5853767dcb5bedf18e0473928e143d96c9717a0adcf610b181c28fac56557b496f899dce06ec4d3dfd77ba472e41910d443e62b7a911b1b8ac5e4a76a9fb6462496bba125efc59106e7fffb4c35bb2b8e4f5290373c454b00acd1b3127f713d30c46c4e8465fc79dd77b7e8d9471738bcc90b6fc6db9ddf4141d532ff16ed99a024b8d3807321e94a8926b299d4bbdccd3b8484259741efeaa082ddb0809df5dd5c6fa510182e56e7473b1f85f0aca93a3ff7057c8dfa39f93f395e6b23e17b671058bcdd4a2a85b066a6d775d124624561ca93e77cbf3fe23e425b975a63e8bdef6c183c283f89d5419cf47d7e3ebbced94af4f69788836c628f0bdb4b493ac10dd40147f21bbf3e022df0e2c856227a4a48a20d1cf9784d789192bd9f5bc308adca029bab2e45aa4ae63df4a5aa107b2dc9e467fb11620f314ae8cfd3fe44566d0a932087566597f32c76e9fdf86ab515a73ca043077cbef2fffde69c2c4cbf260a36f79985926365b3dd8465657bf9d4a408a6cd169e5615a791087f1cef6a5e5199a0c0068a19be36fe8d7cd494ba7073b75d0037ec11ecd2bc6ba1bc4f3dc53b41f615c9ee0d43d84dcaf4222ec99db525d6c5ed9e237e96c27861d467df554c4993f4a299e537b89a93c51e24a0e2071a1a101a2a72dfbe7df2a2a4974cbeb1cb951af25ab301aea8f8cf1858e4292dc0071719023d36fb787845005a04ace99a5490eac5028150988d7521ee76f89371cfbec3a2f3d79edd1c935a6a392a1e80fb486e2a6c45e6f9fbc6a0e5ebd135a708c257f4b13f6fc15cd11aedb90fe031ab7d1fa8f7de491eaad84471f8f0f5fd33a5574826492aba7fa8607269e08e26303b11aa8eb90102a3e7d2dc536a79a48bba1d300631e74b0ce6adec8d29ed80e3007d1e9a845759ea0843f59b98500f341fc072905e3f68a41745537179428b68c208253599e505a458b16386c474c3d403accb982d6746714af1d3c1b0270f7a16adbd6ce8be43a13a88685960894a630c525b15a0ac7a8a604e6cb2865723a78b823353826beee5a71ffa8c5d6a99934eccf7490a44977fd3486f932e7f78299c576ca454cf9ebb5f90a27c734af61a9653a922011b6295b986d5213e97b441ca032919af04a81e669c1e44ad055a60d9be72ebe3cf0d2e81177a1704671ea1e709d1b2f174b51b51614ea4f646c37bd24179255a5b2dad6be87077dc9fbe4f77b6f128d9eeebd1219c0b1107a68cb23cd20ea2c0fb5ee867869277e634e57b9f90541d38e7ce57a9d065ea7e0b20c84b0a695b0269147c052c2f79ed470115712b72ed78644c1263da6019e22c9209b20522d0888f8f39c0942329db38f0974e000e058c1119029b5f1966463e3691e3a928dbdbc5e911d19997ad78c97f603cdc73122b89b21ad2f86749b73fe5a2ead9c25933642379a69a5e461058f8a7c5ac1c0a982029b012446ead1b2241924eb4a2b6cc7057993eb8ec3a1f4b7ae45372eff77211e7f48210e86e83fdd0c4e2d22b7903724d0ad54cf16c10afa6669bc3fb3cefe4e2bf7856945878658121b02ac4f2e3be6d8116db64710bcd59d08aee04b03bdf4f1ec9ce47ec847692557ff1b771ec67c1ae077df1c0598aaa7f6cd302ed82bffda08b3fb8a4ac2b95a64effdf17e29f4ac2a0ccd9ff42938c9966818c69632964586fd58d3bdd87003f6e722157764070cf8a064458012ed0d18367bfb1bd4cb5f32900925b0757b90a863986237588ab50521b7b480010d8073768fbbfe884803162e219ad9e8701ced9ca9133a24e93d8a57d561f225578c96245a614a7648f20b820fd020f14886d697b746ee953b416cc056627785dbc4f42a1c6652b1d4f8d02b729f67382b4bfefccab15e1f41af76d75c9ef26ed62b589ee83fa2bbaab8af72e17ca2ed748b53eadf2e2cdcabc304836f3aab84e6d6e1cca5ae47e50ff99ef547e9131d0f7001be39fb995fb4516efa06f16aa422a5c342fe4ba01d97ac50fabae3f42dd2198b6ad246226973a23fdf5a2fd10d71dd8848a08043655d13836a05b65916daa880a30ce9709fb18bc87118b9dd4cf0e91aa8f67592b4ee88b88974fca33a744d0c300b1debe67e0762878e3de8216ce5d58dcd3e04f2356e278548d25615d6ef2c6d860e026f781bb90b463f88d1d8df3fb682331b9f70c65b0ae2d1a9cbf154f8b0eef02677f38d6c69764abaadc49f23a5bca40874abd6ee3fe2456e393d84fd4c0200a234846800edf1a2b3a7f878e194222c6111e362f1368ebe3b4b06ce35d7e824759d17f8e298464e4362f1381b423849c3174f61d6e0f1b3cb23e7d7b636a84b2b69e4b3a56e5446065a939a5b061e8a7662f3b0c48f22eec844cb6481059d81dc5636db544f0d4b99afc230211401e4dc0e2994f4e2a5a7c31a73f55feb0ca3df4420b3ac76940db087afd141b07b20f583a45d9f3862204f924af167377c9458ff6feca4411f77ef7a3bb76dd733a10a9d41def92608dfec94682a31e120f8470c5f43705a1f65b9e0102b2ebe9be28dd34042690b5a2e83a183de6a90c196b46ae5efddce444e0012e74204e7962d32793c95d028854ebeffdd3c908a83318ba138d8669260c4bc9646d0683f84dece3354cacbe32578beb8d73a8e1b800cad114d19bdaf5eda95517907b1f72c8b85abdb26a9023b263d76cc2fa813c2575613509505248d11c323b176077761b288187b9791cffbc5dd4c84b582e4dc54bfc2b784cc052e1e514b26c33638e105f8140ee9327c202da28805a1df80ae25ade4767048a2eb9f156d9d5376c9d25590d80e13a9976559bee69d7b6e4939482ed5383fccd3d34e28e7d0763b71ca49e33acf698c6fc24dc5389d9252ce6f77d72929b7bcca149f881f8b1e32960f78a368b8ca4d15cf545af12eb42f6b6e06a8938b7af8c34edeca0763ec1bba49088ad998220295a61966718387dfbc2215c427f0c7070d725e3ca7f947a1931bc45cb6493352dc039c0a446ccd795bad667098ade13efda53f857dce5690973e82becbcf8b132aa4b75a6a2915473d6583d2049e4763b9e774e51e596f64526ff0074915defcdf7fe77d5a13135fa530bbcda6d80985fc074e170755804b42c1a8b413ddca45b17b8a2a6d848a3f5d92c8b9329eeaab2a577a70db3ac082c482d93f8071c32057b9ac4634bc2a698c2294ba2da8a2eced79a8d80303203824d2df1ed5201b29e265cb0f011e26af9eb116507de3ed3c0aab184add26673aa7c1e7e46173073b0957f1ee34581a267473882593132b4586aefca56f5bad663fa7642d7e40bd9fb9977bf81ef198f9b9286953e0c815c2208ebb47fae96ba343e9d47ad0fb8ce15b0d3dce480fe04eed9889dd9894833f129dc52f2ee85bd62f550e1bb80e1eb8ffcfb5395c7bb9fc37cc466b5ede4333ff444a841cc1dc1882a762ba50b55b4bb39ee969bebae6a76399a61bc73c6c3dd8db067a74fb84555cdb69c207cfb990c8dc4a3bd15ca76fd500c9cfe597eb0cebdd4cd318387fcdd3ef086c350a04b7e8c01894e35a5c89e3a48afef89b817488847f91daa868ba2d838ec6a748ff5977bc946364dcbe8744f2555dbe1a1efde61adb5489740abc21bc060c0228f73be777039215a24d27f5f3c8c4206361c2cacda886571e4eac8fe5c81b48e4b40f8551e0f9d324cfb2b4791939c5ec90e90213cd13e4c7c6cf9ac5616e5d0a92ac33c37fcbf50ccc3922333c5044f1726537ed6f6f9723a87c3f8b86dc25c04b6c60ef86291bba7940492f4b543907853fdc3cbe08bd5011eb3e26cd14413d29286353e88eafe7c078db87c7f169438289cae6cf6abf1ec0831fa85442fd11c5c2699e5d5af50ae00680b77ce5d08d0afa436969bcf4bda8d4841013ae41591299e1547f21afa8df1e6d7648bdff40ca216382f75182ab63a50ab7d69d70d9b0f82fdaabbda4fe2b273d45ac4400914a2710434080f602798c05db99a25d64923a96ddfe3b7fb6be4b2ab92e583ad4d93c16a748a54f7d10b37a76f9784ddc688c80869687912ad43229283cb2e47edc742dcf056d297af47e31d125c8a1762a3d9efaabe49e35f4222569d1d93b369d95b6818809bf6b0d101343b411d83eda44c25ce353e81710b77c9ab7803d8389d34a0657ad79cb02e40f608c181273ae0767128d165844d74424e2d0be353434c0b3af92e7cca71abd7bfe7d726b5d53aeb59c0cb65e398f99c57c4fe62b5722a6b0c4e73d160e946185dd05e36a062f746a0e1f233ff7d95ca6f5357ed9b5d2789b116506cb7773f6c80a54deecbdc45bee4d2e97bc408df5ecb66b4591a6f0316335f2faca6474bd8314fec8f86b9630cb0907514a2979da831ee30608685d22d739e4005d2ce4f7ba3155958a1d61dbba92b09ad87d014ce53cd74727aa649d0d6b3bab736560f1ecbe4008183fb50762cd1c048f5c8ae8f39278b014178fe793e247cd03b871879c62c3a3d60082d5d454f6afed384f68894ea5c83d3e307edd2e4eb16ac70df9ecbbf8add4d57db61fe1f730b387904a86a08e741a7fd473684a58b4201521beadc781b2fd0f7fa5faa0b5f34582fbcf8b07f727d739e99d0afcde46f1466c66523a1e0e10b77ec7d0f97b6012b349a17ed9fa0e2eb90d9a596303d2fbcfdefd9c7861f899a084fd04b0b5e6313d7ae748e52f01eb76d41eaf8dffb5744a9e50dbfd6acd0185133e54d43887f85d1cb57f683e2868ef0c7df49ad7ae419501a1485bd3bd9cc28dd0814190e69f2e603e85c53ff130cc3564ce6ddc2d985e1baaec66d8119642280a0a48a8c289de4b0d3f6acd653cc13e4d28d69d855152a0afc8466050537b364818d0ab0583c2455f33c1959aaaa75f8beeeb2d673c8d4bf3fade531be49f4a9b17bcfaf1486474b21c82e9e77d03acaa31f42cb680b467fdb6722bd58f58543c64255e61da79468ee04b3c776dc3140be106939be11399730ae19ae848094f7015e855ab18a94d881955b332e223c4917ffb84490a4c7a7b7077fcc24e26a865632cec0dd1b0b4989fbec108de0f9f08ae57b84790f0391fa18c4762435e73aa7c5c3b3d7d81bbe0dfabca63f721e71e22dc5a950067ebaa7001215fbfdff13afdbb5c660d1e12743956890c8c521ba686a0f5baae5be0edabd8bb4644914e78ad94180b0c1f319affb4514511f9ce8aa3df05182480030669c3eb23a15601a7eb56122a5f27811c47216826c6c363aca1197b670266b9f50c453a5be6dc1a672bba3feaaf4ce7aac1958848323d286e4db754c92ee15711514abeb0c07f9713534379964e0232469d6756b85c59595953564c685690752abc04203f13a0cd383c1e77c5ada88a62e425d95932fdcdb22b4b17202c5bdca25df7c595c6a4536d5261fc77d5f65cffc9c555b109a41a7dfdf08fcb874ad85406a02f5d25afe7bba672b658f4b0f5d41188b4f2c0b3f7c41b809db4368dee0f43a9cf71e76b8fa896df385e6fc24fbcf6d0b111b98b19a0a7ed731814076b32542a2c300e9f42529b25e50d64663c1aade3d6dfa2e1d565533bb39b7590c6b9c0a8d2064cc2ad5ada053c2942118e6b4f24fab86b981c35a3f575c1511eed49cd7e1aed5259885032d1b88cba1e9feb5332c5f31db46761838f84a3c5ff02d24467c3b1a312563c68c6d4d95eb21250c823a08ed0af64fef6e3572a41fa467f18df16b9fb04806a6f38f6976b7e22979276ff536fb938992d3a7d3f5214082f0651c83e23da0cf6b01728b3103480afe8ea0aa48484935af852e917d0ae995d5468dbc14262ba4eddce79db215159b09441f17bb07cfe81d0890d1b3349f13e8f2c90e8062056f3241cb6018d604885bfce5a4971492943e722dee8f34b80fdefeb0277233f9f18c2c34f8b7767ac8d17b7c6d054b91eb0c4f8e42b4ab379cfc398ab2db0cedfa70be6650105d929a8ffb235ac95632049358e3b2ad318d35f9d8f8437ce4a1462ef8eb2d9fb8811eb60e57291d311563229baa36615a4207a0f9a793d45807a122d62f78937757e48bbcd7e5d288238e4fbd70d16e2d59108af65e261b68d00da25421078961c32a89f8722a193c1385782a90e7150e918b0a800e8d1c1f1735e012c90f1ecb9b65f29bc9673a43c3cd1c8e72aff433b7ed91b16c722afc5b2f034f5c4a04b351079ce95ceab02a14a5ac961a6a8934b834bc5d5fa869755816a9f8b38bbafd849f00df31e7c0f088b8cc952c54c47e27c22b40e1e07e74fbe4f688dac224435554e345e6d86afa7e8fb23b27c9216f870d5c09c76924468bac3583cf3ec89ada4e6efa045d2b2e56e581dce029334d29b17e965032a6a72a9a2e085cc4221ff710f03a5ae1c572511b47e620cb5596fde016963ab183ae09ce973b5661b9bbb0108e805800a01130837b52f8cf2e9cdc6e97bc4b4c3c42d810749038dbaed674665110c16975ade85df71749826bd570b99e02eba4d70bf6170d901ddac60c48c609861d6c1cd7b6e80606eb1ac19a903f482e6be3a8dd5f4644f24c694d09bbea08cb036318527fe52a614a2f89977d6fbc035312cd919eda302a5e369bea8167c8810e8c3dcb359af024450b3c4fc32495154ca801894d73311e4cc0135f212b0f8d84e36419743b9ddd68a64ea77024fcf27990ca638abf4fc24e829dbe6fd2bb82bc44be3238f8cd50f2f3b474395128bcea154cb8b9992c7a78a0b35a0ad7c3a0bb93e682525392bfd68d32e4248c3a5ee8f6e2afd8a9fa65314052dac57a0cbd33cdfa115aa66b4dec59a1ba086fc16403b99243412c79eb46f2a900051cee64c1c7da16a92354dbef812e805e882b9ac0cba9470b5621f20a2d296525a97ab9d1bab6d95b043c390050e989caa6cf1db11d6e95c55950b0b316fdf54d7ff58c44a6b760594dff89439c4c0392603fb4e0bedf10cfc712aa3a66fc9e2a8b390e8ba15bd5f66f478821b1a0d553f32f9615cd791a30bcc84aa413e28e6d0305f3ab802874290f62d5aaea742eaf579d759b4f96e64a55c53d6d80eacab133e0ad0242ac2ad4cd215140a202aab76d66169172db7044db360572396eba12a70416488b41f750eadd12a996385cb583c1144d5620b3cec56506d971803112b87435fbb7fe28600c5bc55846654789a4b5eb59879ec172b136ed2a175faf8cafecea2a41ab0b69b135dfd4b72f3c28ae603460b9468f9e949e5b2c79b53b6f8b304d95a3c64665b63eacdb28fb63bde736ed3f0025de1bb43d55cf269df21bb77a6291d1588a3742106ce53040144dc6351af104998675918f954259be0036fff52b2bb56060fb6f3ce1204ed742b687e4ed3a5d2671a8fb55d877cde4290a8f4ca0861d4f67dffefabd033f97a9cf8ad9185230c19be10a0c327be45edd4a7b9a48cc4d699a77ef94b90e4989079488dcb21f89b5405a714f019a29f5be2097a06bb2889a5c159af618a1109d3f3704ba10dd928e337006394c4759706d505124df207ccdda69d3245c76ef936b354d5610765b17e17a4362c158abc717fe3f2e21911ae1a5a99fe6d9d726c700dd46b76f094d17c9bdbd159bb3ccfe3556789411ffd7846734a2d47dadfb3b6b608d2965b0843d5b4331232395713048f861f61de938bb294296d167f465a96d2d0a473269132ad292882d1bb440f8acc58a5ad1863264afca380aba0f9adddc6190b5db66db44d99ac4effb22e7e981fb48b70072a6edec6279e2efc1e300996767681e0dbfed104043a6a9f68067174e8eba4323a093cef67b3f716c4015826860d90bfe034dd273377c43d3a992516a6f4bfc5989a8940b0901167976f5a527d7ce8ce8421ced2338e50c8c1cd830b53944ba9ea44d6005becad0b2f1036e905724f552e6a31c807b09314d0e46529253195e12f7020aabfa8a3ee776a871b2dbd127465b3c7884a0610d6098df0e84933c58d8b68bb627efb661b33a794db9c570854d7df6861a06a165703a01c82d6b66b06b78eebb781b537f9a406dfb5c6c6f7e6a4f7b50e1b46a182f367202fe100904a2a8e0ca0b026fb880e345fee443407bc76dffe6dcb30715cf83af9bd32cb675b0d863caf754a568ec14f8d480e6f14243e99a75bf0dcc2d01944523eab7573d82dab21589049798a8baf0c8e134363b862cb280ee4ecb3f7906fa00c8a47914a3029ebc740e5bf131d2872c167f57fd44f0f136a22ea8250ea2e88a1de963f4f2e9f8753c0446c8f1d06f0cfd50dc82accbe57dd97a2dc6610a8984009252c32f062469d3065a19472c3bbee94a68586ce12a100f743d267b706e66f9eb6a34363338eaa5f11cfff544999b004f5536a876f57fffde4dd46a5c50be4e52361f63590b2ec6e0f1d4437e8505fa73aecfa882ef98361fb1d04d022616b969df7e0abd7c4a01eead2c0196b415f1c9d261622af87315467851cd5105d207880d57f79ffce1b1176e9162eb53e76a55196986e9bb37ce4268ef1fea1cd152dc0e2c1ae03038b1f7af48c12b899d43346b077d8c47d2ed290e010b200d6b24efb77cbabf3e31f4dbcce3d7669eb41b3cf3db3015c9cd22b744ce807f326a92a11e6d124c07b4</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+            <p>提升速度⏩，增加功能🔨</p>
+<a id="more"></a>
+<hr>
+<h2 id="第四部分-BBR-BBR-加速"><a href="#第四部分-BBR-BBR-加速" class="headerlink" title="第四部分 BBR/BBR+加速"></a>第四部分 BBR/BBR+加速</h2><p>​    在搭建Trojan的情况下，BBR加速是必不可少的，虽然很多新内核已经内置BBR内核，但没有默认打开加速或者屏蔽了内置的BBR内核，这里先放一下BBR加速后的速度对比</p>
+<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/dpxlq.png" alt=""></p>
+<blockquote>
+<p>BBR+的加速效果最为明显</p>
+</blockquote>
+<p>首先安装BBR家族安装集成脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
+
+<p>在主界面选择想要安装的加速方案，这里简单提一下4种加速的优劣：</p>
+<ul>
+<li><p>原版BBR</p>
+<p>​    最原始的BBR版本，有时候会出现断流的现象，且由于优化不如其他加速内核而导致速度较低</p>
+</li>
+<li><p>魔改BBR</p>
+<p>​    修改了内核，让其速度更快，但存在断流现象</p>
+</li>
+<li><p>锐速</p>
+<p>​    更好的利用硬件资源来增加速度</p>
+</li>
+<li><p>BBR+</p>
+<p>优化了内核代码来加速，可以说是大部分人最好的选择</p>
+</li>
+</ul>
+<p>安装完成后会提示重启，重启完成后通过命令查看内核版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure>
+
+<p>也可以选择继续使用我们刚刚的BBR一键脚本来检验，主界面会自动提示当前使用的加速内核</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
+
+<p>🍺 安装完加速内核后可以去<a href="https://www.speedtest.net/">speedtest官网</a>测试或者<a href="https://www.speedtest.net/apps/cli">下载SpeedTestCli</a>，在开启Mellow全局透明代理的情况下测试。</p>
+<hr>
+<h2 id="第五部分-通过DNS服务器（供应商）解锁流媒体"><a href="#第五部分-通过DNS服务器（供应商）解锁流媒体" class="headerlink" title="第五部分 通过DNS服务器（供应商）解锁流媒体"></a>第五部分 通过DNS服务器（供应商）解锁流媒体</h2><p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/vhno0.gif" alt=""></p>
+<blockquote>
+<p>通过DNS服务器反代实现解锁流媒体的原理图</p>
+</blockquote>
+<p>要了解DNS服务器是如何做到解锁流媒体，首先要知道DNS服务器会对我们的VPS产生什么影响：</p>
+<ol>
+<li>作为DNS服务器，提供最基本的域名（Netflix、Disney+等等）解析</li>
+<li>在解析流媒体地址后，为我们的VPS提供流媒体数据包的反向代理</li>
+</ol>
+<p>这里只对DNS服务器提供商做推荐，因为教程较为简单，一般在服务商控制台页面都有提供：</p>
+<ol>
+<li><a href="https://shop.bgp.sh/clientarea.php">BGP Shop</a></li>
+<li><a href="https://steamsv.com/">STEAMSV</a></li>
+</ol>
+<hr>
+<p>🍺 简单的BBR加速和流媒体解锁完成了，如果你有所收获，可以请作者喝咖啡 ⬇️</p>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -249,17 +291,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/06/Trojan的服务端与客户端搭建经验分享（二）/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Trojan的服务端与客户端搭建经验分享（二）</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/14/学习方法总结/">
-                <span class="level-item">学习方法总结</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/06/正向代理的分流原理与介绍/">
+                <span class="level-item">正向代理的分流原理与介绍</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -274,7 +309,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -313,7 +348,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            6
+                            7
                         </p>
                     </a>
                 </div>
@@ -395,6 +430,25 @@
     
         
 
+    <div class="card widget" id="toc">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    目录
+                </h3>
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#第四部分-BBR-BBR-加速">
+        <span class="has-mr-6">1</span>
+        <span>第四部分 BBR/BBR+加速</span>
+        </a></li><li>
+        <a class="is-flex" href="#第五部分-通过DNS服务器（供应商）解锁流媒体">
+        <span class="has-mr-6">2</span>
+        <span>第五部分 通过DNS服务器（供应商）解锁流媒体</span>
+        </a></li></ul>
+            </div>
+        </div>
+    </div>
+
     
         <div class="card widget">
     <div class="card-content">
@@ -432,45 +486,6 @@
 </div>
 
     
-        
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/笔记/">
-            <span class="level-start">
-                <span class="level-item">笔记</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">5</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/课程/">
-            <span class="level-start">
-                <span class="level-item">课程</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            标签云
-        </h3>
-        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/复旦课程/" style="font-size: 10px;">复旦课程</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
-    </div>
-</div>
-    
     
         <div class="column-right-shadow is-hidden-widescreen ">
         
@@ -482,16 +497,16 @@
         
         <article class="media">
             
-            <a href="/2020/02/06/Trojan的服务端与客户端搭建经验分享（二）/" class="media-left">
+            <a href="/2020/02/07/服务器的BBR加速与流媒体解锁/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与客户端搭建经验分享（二）">
+                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-06T02:39:38.000Z">2020-02-06</time></div>
-                    <a href="/2020/02/06/Trojan的服务端与客户端搭建经验分享（二）/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Trojan的服务端与客户端搭建经验分享（二）</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-07T05:29:57.000Z">2020-02-07</time></div>
+                    <a href="/2020/02/07/服务器的BBR加速与流媒体解锁/" class="title has-link-black-ter is-size-6 has-text-weight-normal">服务器的BBR加速与流媒体解锁</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/笔记/">笔记</a>
                     </p>
@@ -501,16 +516,35 @@
         
         <article class="media">
             
-            <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享（一）/" class="media-left">
+            <a href="/2020/02/06/正向代理的分流原理与介绍/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与客户端搭建经验分享（一）">
+                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="正向代理的分流原理与介绍">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-06T02:39:38.000Z">2020-02-06</time></div>
+                    <a href="/2020/02/06/正向代理的分流原理与介绍/" class="title has-link-black-ter is-size-6 has-text-weight-normal">正向代理的分流原理与介绍</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/笔记/">笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/05/Trojan的服务端与基础客户端搭建/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-05T06:35:16.000Z">2020-02-05</time></div>
-                    <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享（一）/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Trojan的服务端与客户端搭建经验分享（一）</a>
+                    <a href="/2020/02/05/Trojan的服务端与基础客户端搭建/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Trojan的服务端与基础客户端搭建</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/笔记/">笔记</a>
                     </p>
@@ -556,25 +590,45 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/07/04/Hexo框架实现个人博客/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2538191405,1268730134&amp;fm=26&amp;gp=0.jpg" alt="Hexo框架实现个人博客">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-04T08:59:12.000Z">2019-07-04</time></div>
-                    <a href="/2019/07/04/Hexo框架实现个人博客/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo框架实现个人博客</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/课程/">课程</a>
-                    </p>
-                </div>
-            </div>
-        </article>
+    </div>
+</div>
         
+            
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/笔记/">
+            <span class="level-start">
+                <span class="level-item">笔记</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/课程/">
+            <span class="level-start">
+                <span class="level-item">课程</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/复旦课程/" style="font-size: 10px;">复旦课程</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
     </div>
 </div>
         
@@ -592,7 +646,7 @@
                     <span class="level-item">二月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -663,7 +717,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Trojan/">
                         <span class="tag">Trojan</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -705,7 +759,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/计算机/">
                         <span class="tag">计算机</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -747,16 +801,16 @@
         
         <article class="media">
             
-            <a href="/2020/02/06/Trojan的服务端与客户端搭建经验分享（二）/" class="media-left">
+            <a href="/2020/02/07/服务器的BBR加速与流媒体解锁/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与客户端搭建经验分享（二）">
+                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-06T02:39:38.000Z">2020-02-06</time></div>
-                    <a href="/2020/02/06/Trojan的服务端与客户端搭建经验分享（二）/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Trojan的服务端与客户端搭建经验分享（二）</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-07T05:29:57.000Z">2020-02-07</time></div>
+                    <a href="/2020/02/07/服务器的BBR加速与流媒体解锁/" class="title has-link-black-ter is-size-6 has-text-weight-normal">服务器的BBR加速与流媒体解锁</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/笔记/">笔记</a>
                     </p>
@@ -766,16 +820,35 @@
         
         <article class="media">
             
-            <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享（一）/" class="media-left">
+            <a href="/2020/02/06/正向代理的分流原理与介绍/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与客户端搭建经验分享（一）">
+                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="正向代理的分流原理与介绍">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-06T02:39:38.000Z">2020-02-06</time></div>
+                    <a href="/2020/02/06/正向代理的分流原理与介绍/" class="title has-link-black-ter is-size-6 has-text-weight-normal">正向代理的分流原理与介绍</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/笔记/">笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/05/Trojan的服务端与基础客户端搭建/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-05T06:35:16.000Z">2020-02-05</time></div>
-                    <a href="/2020/02/05/Trojan的服务端与客户端搭建经验分享（一）/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Trojan的服务端与客户端搭建经验分享（一）</a>
+                    <a href="/2020/02/05/Trojan的服务端与基础客户端搭建/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Trojan的服务端与基础客户端搭建</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/笔记/">笔记</a>
                     </p>
@@ -821,25 +894,45 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/07/04/Hexo框架实现个人博客/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2538191405,1268730134&amp;fm=26&amp;gp=0.jpg" alt="Hexo框架实现个人博客">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-04T08:59:12.000Z">2019-07-04</time></div>
-                    <a href="/2019/07/04/Hexo框架实现个人博客/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo框架实现个人博客</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/课程/">课程</a>
-                    </p>
-                </div>
-            </div>
-        </article>
+    </div>
+</div>
+    
         
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/笔记/">
+            <span class="level-start">
+                <span class="level-item">笔记</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/课程/">
+            <span class="level-start">
+                <span class="level-item">课程</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/复旦课程/" style="font-size: 10px;">复旦课程</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
     </div>
 </div>
     
@@ -857,7 +950,7 @@
                     <span class="level-item">二月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -928,7 +1021,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Trojan/">
                         <span class="tag">Trojan</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -970,7 +1063,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/计算机/">
                         <span class="tag">计算机</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1005,7 +1098,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="Trojan的服务端与客户端搭建经验分享（一）" height="28">
+                    <img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/favicon.png" alt="服务器的BBR加速与流媒体解锁" height="28">
                 
                 </a>
                 <p class="is-size-7">
