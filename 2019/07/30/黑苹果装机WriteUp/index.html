@@ -18,12 +18,12 @@
 <meta property="og:site_name" content="Barry&#39;s Blog">
 <meta property="og:description" content="写在开头​    2019年7月30日，在我心中酝酿许久的那颗对于MacOS的渴望之心，终于还是迸发了出来，也就有了这个Write Up，旨在能够让自己坚持搞下去（毕竟大价钱买的SSD）且能给后面要装黑苹果的同学铺个路，不多说，直接上配置。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/%E5%B0%81%E9%9D%A2.png">
-<meta property="og:updated_time" content="2020-02-06T05:47:17.551Z">
+<meta property="og:image" content="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130708.jpg">
+<meta property="og:updated_time" content="2020-02-08T13:07:30.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="黑苹果装机WriteUp">
 <meta name="twitter:description" content="写在开头​    2019年7月30日，在我心中酝酿许久的那颗对于MacOS的渴望之心，终于还是迸发了出来，也就有了这个Write Up，旨在能够让自己坚持搞下去（毕竟大价钱买的SSD）且能给后面要装黑苹果的同学铺个路，不多说，直接上配置。">
-<meta name="twitter:image" content="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/%E5%B0%81%E9%9D%A2.png">
+<meta name="twitter:image" content="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130708.jpg">
 
 
 
@@ -139,7 +139,7 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/%E5%B0%81%E9%9D%A2.png" alt="黑苹果装机WriteUp">
+            <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130708.jpg" alt="黑苹果装机WriteUp">
         </span>
     </div>
     
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    11 分钟 读完 (大约 1667 个字)
+                    10 分钟 读完 (大约 1548 个字)
                 </span>
                 
                 
@@ -188,76 +188,73 @@
 <p>网卡：瑞昱 RTL8168/8111/8112 Gigabit Ethernet Controller / 蓝天(CLEVO)</p>
 </blockquote>
 <h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>​    开始装机，这款神舟用的蓝天准系统 公模，所以拆完D面就直接找到了多出的M.2接口</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6082.JPG" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125547.jpg" alt=""></p>
 <blockquote>
 <p>D面大体就是这个亚子</p>
 </blockquote>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6073.JPG" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125552.jpg" alt=""></p>
 <blockquote>
 <p>如图，左边有一个空闲的M.2插槽</p>
 </blockquote>
 <p>​    然而问题来了，我拿手边一个空闲的SSD试了一下发现接口对不上，在查阅后发现了问题，原来是因为M.2接口也分Socket2和Socket3，而他们的区别也不止在支持的协议上，还有他们的接口形状。</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6080.PNG" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125556.png" alt=""></p>
 <blockquote>
 <p>图示为2和3明显的接口区别，购买时千万不要踩坑</p>
 </blockquote>
 <p>​    观察完了插槽和接口还不够，我拨打了神舟客服询问了该拓展插槽支持的协议，惊奇的发现不支持NVMe，只支持SATA和PCIe，最终我只得放弃三星的高速SSD，选择了Intel的稳定且价格较低的500G SSD。</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/IMG_6074.PNG" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125550.png" alt=""></p>
 <p>​    然后就是坐等到货的漫长时光啦，Day1 END。。。</p>
-<hr>
 <h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><p>​    今天算是工程中最重要的步骤之一，我要检查是否每个硬件都有其对应的apple原生驱动，首先来到声卡，这很明显是一块板载的ALC899声卡，我查了下，竟恰好有托管在github上的项目专门针对ALC899在MacOS中的原生高音质输出进行体现和维护</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/github01.png" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125547.png" alt=""></p>
 <blockquote>
 <p>Github中的项目</p>
 </blockquote>
 <p>​    然后就是烧录U盘了，我用的balenaetcher，这是一个在Github上的开源项目，支持MacOS的dmg安装文件的烧录，但在烧录之前，我还要校验一遍MD5来确保dmg文件没有问题，然后烧录进去。</p>
 <p>​    在烧录完的盘里配置了一下plist文件，研究了很多关于配置的文章，坐等明天取回盘后开工！</p>
 <p>​    Day2 END</p>
-<hr>
 <h2 id="Day3"><a href="#Day3" class="headerlink" title="Day3"></a>Day3</h2><p>​    硬盘取回家前，先将系统包（包内含用于EFI恢复的PE系统、Clover引导和苹果系统安装程序）烧录进U盘</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_46.jpg" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125555.jpg" alt=""></p>
 <blockquote>
 <p>ESP分区内的EFI为Clover引导文件夹</p>
 </blockquote>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_39.jpg" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125550.jpg" alt=""></p>
 <blockquote>
 <p>烧录完后的U盘存储结构</p>
 </blockquote>
 <p>​    我们已经确认了ESP分区为存放Clover引导的地方，PE分区显然是PE系统，而5.77GB的分区我们可以猜测就是MacOS的安装包存放位置</p>
 <p>​    下面就进入到装SSD环节</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_3d.jpg" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125558.jpg" alt=""></p>
 <blockquote>
 <p>可以明显的看到神舟原厂并没有给配M.2螺丝</p>
 </blockquote>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_48.jpg" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125548.jpg" alt=""></p>
 <blockquote>
 <p>而螺丝的短小超出了我的想象</p>
 </blockquote>
 <p>​    最后只得利用我所能找到最短且口径相同的螺丝代替，SSD仍存在松动，这也是我不得不吐槽神舟的地方，盒子里不给配螺丝，扩展位也不给螺丝，非常不方便加装。</p>
 <p>​    烧录完成后我重新插拔U盘并进行重启，在开机页面F2进入BIOS页面，选择通过USB启动，成功的进入了Clover引导页面，然而迎来的却是更大的问题</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_26.jpg" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125553.jpg" alt=""></p>
 <blockquote>
 <p>Clover只能识别Windows系统，却识别不到安装包</p>
 </blockquote>
 <p>​    最终尝试N次后无果，确认是镜像出了问题，立即换了网站下载镜像并重复以上步骤，进入Clover页面终于看到了安装包选项，接下来是更头疼的问题</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_30.jpg" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125554.jpg" alt=""></p>
 <blockquote>
 <p>滚代码时屏幕出现🚫符号</p>
 </blockquote>
 <p>​    在查阅CSDN和简书中的类似问题后发现，一切有关🚫的问题都指向了“Couldn’t allocate memory”这个Error，翻译成中文就是无法分配内存，而这只有在Mac系统下的Clover Configure中设置EFI才能解决，也就是说在当前情况下这个问题是无解的，最后只得借助网上已经配好的EFI碰运气，终于在更换了一个类似机型的config.plist文件后进入了安装页面（具体解决原理会在后面讲到）</p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_38.jpg" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125556.jpg" alt=""></p>
 <blockquote>
 <p>一开始尝试更改启动选项为AHCI，然而没有效果</p>
 </blockquote>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_41.jpg" alt=""></p>
-<p><img src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/Day3/UNADJUSTEDNONRAW_thumb_3a.jpg" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125549.jpg" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-125557.jpg" alt=""></p>
 <blockquote>
 <p>⬆️成功进入安装页面后的成就感（虽然当时的EFI是抄来的）</p>
 </blockquote>
 <p>​    就这样，系统成功安装，但是在使用方面仍存在很多问题，也是后面几天会解决的问题，到Day3结束时就已经查询了近百篇博客，知识量的庞大非常考验人的毅力和总结能力，因为黑苹果的许多特殊原因（错误的多样性等等），有许多问题需要自己去尝试和寻找答案，这是个高压且工作量巨大的过程。</p>
 <p>Day3 END</p>
-<hr>
-<h2 id="Day4"><a href="#Day4" class="headerlink" title="Day4"></a>Day4</h2>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -387,7 +384,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            7
+                            6
                         </p>
                     </a>
                 </div>
@@ -411,7 +408,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            13
+                            11
                         </p>
                     </a>
                 </div>
@@ -495,10 +492,6 @@
         <a class="is-flex" href="#Day3">
         <span class="has-mr-6">5</span>
         <span>Day3</span>
-        </a></li><li>
-        <a class="is-flex" href="#Day4">
-        <span class="has-mr-6">6</span>
-        <span>Day4</span>
         </a></li></ul>
             </div>
         </div>
@@ -554,7 +547,7 @@
             
             <a href="/2020/02/07/服务器的BBR加速与流媒体解锁/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
                 </p>
             </a>
             
@@ -573,7 +566,7 @@
             
             <a href="/2020/02/06/正向代理的分流原理与介绍/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="正向代理的分流原理与介绍">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="正向代理的分流原理与介绍">
                 </p>
             </a>
             
@@ -592,7 +585,7 @@
             
             <a href="/2020/02/05/Trojan的服务端与基础客户端搭建/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
                 </p>
             </a>
             
@@ -611,7 +604,7 @@
             
             <a href="/2019/08/14/学习方法总结/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/03.jpg" alt="学习方法总结">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-03.jpg" alt="学习方法总结">
                 </p>
             </a>
             
@@ -630,7 +623,7 @@
             
             <a href="/2019/07/30/黑苹果装机WriteUp/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/%E5%B0%81%E9%9D%A2.png" alt="黑苹果装机WriteUp">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130708.jpg" alt="黑苹果装机WriteUp">
                 </p>
             </a>
             
@@ -662,7 +655,7 @@
                 <span class="level-item">笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/课程/">
@@ -683,7 +676,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/复旦课程/" style="font-size: 10px;">复旦课程</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
+        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
     </div>
 </div>
         
@@ -723,7 +716,7 @@
                     <span class="level-item">七月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -791,13 +784,6 @@
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/复旦课程/">
-                        <span class="tag">复旦课程</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
                     <a class="tags has-addons" href="/tags/已授课/">
                         <span class="tag">已授课</span>
                         <span class="tag is-grey">1</span>
@@ -815,13 +801,6 @@
                     <a class="tags has-addons" href="/tags/计算机/">
                         <span class="tag">计算机</span>
                         <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/逆向/">
-                        <span class="tag">逆向</span>
-                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -858,7 +837,7 @@
             
             <a href="/2020/02/07/服务器的BBR加速与流媒体解锁/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
                 </p>
             </a>
             
@@ -877,7 +856,7 @@
             
             <a href="/2020/02/06/正向代理的分流原理与介绍/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="正向代理的分流原理与介绍">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="正向代理的分流原理与介绍">
                 </p>
             </a>
             
@@ -896,7 +875,7 @@
             
             <a href="/2020/02/05/Trojan的服务端与基础客户端搭建/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
                 </p>
             </a>
             
@@ -915,7 +894,7 @@
             
             <a href="/2019/08/14/学习方法总结/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/03.jpg" alt="学习方法总结">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-03.jpg" alt="学习方法总结">
                 </p>
             </a>
             
@@ -934,7 +913,7 @@
             
             <a href="/2019/07/30/黑苹果装机WriteUp/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/%E5%B0%81%E9%9D%A2.png" alt="黑苹果装机WriteUp">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130708.jpg" alt="黑苹果装机WriteUp">
                 </p>
             </a>
             
@@ -966,7 +945,7 @@
                 <span class="level-item">笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/课程/">
@@ -987,7 +966,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/复旦课程/" style="font-size: 10px;">复旦课程</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
+        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
     </div>
 </div>
     
@@ -1027,7 +1006,7 @@
                     <span class="level-item">七月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1095,13 +1074,6 @@
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/复旦课程/">
-                        <span class="tag">复旦课程</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
                     <a class="tags has-addons" href="/tags/已授课/">
                         <span class="tag">已授课</span>
                         <span class="tag is-grey">1</span>
@@ -1119,13 +1091,6 @@
                     <a class="tags has-addons" href="/tags/计算机/">
                         <span class="tag">计算机</span>
                         <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/逆向/">
-                        <span class="tag">逆向</span>
-                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 

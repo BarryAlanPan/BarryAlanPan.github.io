@@ -18,12 +18,12 @@
 <meta property="og:site_name" content="Barry&#39;s Blog">
 <meta property="og:description" content="第三部分 客户端（下）​    上文讲到Trojan在MacOS上利用homebrew的基本部署办法，这一文将在MacOS基础上继续讲讲本地分流策略⬇️ ​    由于多数人用的机房都在海外，且每月VPS限制流量，每个人的用网需求也不同，VPS访问国内网络速度也会慢，因此使用分流策略是必不可少的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png">
-<meta property="og:updated_time" content="2020-02-07T06:51:46.561Z">
+<meta property="og:image" content="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png">
+<meta property="og:updated_time" content="2020-02-08T13:17:06.100Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正向代理的分流原理与介绍">
 <meta name="twitter:description" content="第三部分 客户端（下）​    上文讲到Trojan在MacOS上利用homebrew的基本部署办法，这一文将在MacOS基础上继续讲讲本地分流策略⬇️ ​    由于多数人用的机房都在海外，且每月VPS限制流量，每个人的用网需求也不同，VPS访问国内网络速度也会慢，因此使用分流策略是必不可少的">
-<meta name="twitter:image" content="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png">
+<meta name="twitter:image" content="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png">
 
 
 
@@ -139,7 +139,7 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="正向代理的分流原理与介绍">
+            <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="正向代理的分流原理与介绍">
         </span>
     </div>
     
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 1060 个字)
+                    7 分钟 读完 (大约 1053 个字)
                 </span>
                 
                 
@@ -182,7 +182,7 @@
 <p>​    下面将介绍两种分流的策略：</p>
 <hr>
 <h3 id="全局透明代理：Mellow"><a href="#全局透明代理：Mellow" class="headerlink" title="全局透明代理：Mellow"></a>全局透明代理：Mellow</h3><p>⬇️ 图为原理动画，花了一小时做的，认真看</p>
-<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/h4pvh.gif" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130012.gif" alt=""></p>
 <blockquote>
 <p>图中所示的是通过Mellow进行系统内全局流量的分配过程</p>
 </blockquote>
@@ -192,14 +192,14 @@
 <p>首先进入项目主页，翻阅<a href="https://github.com/mellow-io/mellow">README</a>文件找到“<a href="https://github.com/mellow-io/mellow#%E6%9B%B4%E5%A4%9A%E9%85%8D%E7%BD%AE">更多配置</a>”</p>
 </li>
 </ul>
-<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/53vot.png" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130026.png" alt=""></p>
 <p>​    删除原来的.conf文件内容，将“更多配置”里所有内容复制下来粘贴到文件中</p>
-<img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/vo6pz.png" style="zoom: 33%;" />
+<img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130047.png" style="zoom: 33%;" />
 
 <p>​    把框内的内容更改成自己的配置(socks端口，分流细节)</p>
 <p>​    其中”Group”表示代理组，在多代理节点的情况下Mellow会根据高可用性来分辨该从代理组中哪个节点走流量。</p>
 <p>​    “RoutingRule”下所有规则是我们设置的重点，我们可以根据自己的需要，将需要代理的进程和网站规则放进去，其中”Direct”表示直连，”Group”表示走代理组。</p>
-<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/28wp9.png" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130009.png" alt=""></p>
 <blockquote>
 <p>Mellow通过Trojan提供的Sock5正向代理端口完成的全局流量的代理分配（这句话要好好理解）</p>
 </blockquote>
@@ -211,7 +211,7 @@
 <p>​    由于是全局透明代理，查看流量去向是必不可少的（防止没有设置过的流量走错），Mellow贴心的提供了Session供我们查看流量快照，点击<strong>Sessions</strong>后Mellow会自动打开浏览器到Sessions页面，你可以查看到正在活跃的传输和完成的传输，如果查看到有异常流量（比如你访问Bilibili，却发现流媒体数据全走了代理），这时候可以在<em>.conf</em>文件的<strong>路由规则</strong>里设置以达到理想效果。</p>
 <p>​    如果你发现所有网页突然无法加载了，这时候你应该先查看Sessions确定流量走向，然后再到Mellow中的<strong>Log</strong>寻找错误。</p>
 <hr>
-<h3 id="PAC分流：V2rayU"><a href="#PAC分流：V2rayU" class="headerlink" title="PAC分流：V2rayU"></a>PAC分流：V2rayU</h3><p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/98llv.gif" alt=""></p>
+<h3 id="PAC分流：V2rayU"><a href="#PAC分流：V2rayU" class="headerlink" title="PAC分流：V2rayU"></a>PAC分流：V2rayU</h3><p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130010.png" alt=""></p>
 <blockquote>
 <p>PAC和全局的原理图</p>
 </blockquote>
@@ -221,16 +221,16 @@
 <p>和Mellow的设置相比，V2rayU的设置并没有那么高端，只需简单几步该数据就好</p>
 </li>
 </ul>
-<img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/t61zl.png" style="zoom:50%;" />
+<img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130105.png" style="zoom:50%;" />
 
 <blockquote>
 <p>注意这里用的是Socks协议，对应的环回地址(127.0.0.1)和Socks开的端口一定要正确</p>
 </blockquote>
 <p>​    打开PAC代理模式后别忘了浏览器里的Socks代理关了再去测试</p>
-<img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/kiigp.png" style="zoom:50%;" />
+<img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130114.png" style="zoom:50%;" />
 
 <p>​    最后打开浏览器测试下连接</p>
-<p><img src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/qw8jz.png" alt=""></p>
+<p><img src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130024.png" alt=""></p>
 <blockquote>
 <p>🍺 完美连接</p>
 </blockquote>
@@ -364,7 +364,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            7
+                            6
                         </p>
                     </a>
                 </div>
@@ -388,7 +388,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            13
+                            11
                         </p>
                     </a>
                 </div>
@@ -519,7 +519,7 @@
             
             <a href="/2020/02/07/服务器的BBR加速与流媒体解锁/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
                 </p>
             </a>
             
@@ -538,7 +538,7 @@
             
             <a href="/2020/02/06/正向代理的分流原理与介绍/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="正向代理的分流原理与介绍">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="正向代理的分流原理与介绍">
                 </p>
             </a>
             
@@ -557,7 +557,7 @@
             
             <a href="/2020/02/05/Trojan的服务端与基础客户端搭建/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
                 </p>
             </a>
             
@@ -576,7 +576,7 @@
             
             <a href="/2019/08/14/学习方法总结/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/03.jpg" alt="学习方法总结">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-03.jpg" alt="学习方法总结">
                 </p>
             </a>
             
@@ -595,7 +595,7 @@
             
             <a href="/2019/07/30/黑苹果装机WriteUp/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/%E5%B0%81%E9%9D%A2.png" alt="黑苹果装机WriteUp">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130708.jpg" alt="黑苹果装机WriteUp">
                 </p>
             </a>
             
@@ -627,7 +627,7 @@
                 <span class="level-item">笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/课程/">
@@ -648,7 +648,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/复旦课程/" style="font-size: 10px;">复旦课程</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
+        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
     </div>
 </div>
         
@@ -688,7 +688,7 @@
                     <span class="level-item">七月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -756,13 +756,6 @@
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/复旦课程/">
-                        <span class="tag">复旦课程</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
                     <a class="tags has-addons" href="/tags/已授课/">
                         <span class="tag">已授课</span>
                         <span class="tag is-grey">1</span>
@@ -780,13 +773,6 @@
                     <a class="tags has-addons" href="/tags/计算机/">
                         <span class="tag">计算机</span>
                         <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/逆向/">
-                        <span class="tag">逆向</span>
-                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -823,7 +809,7 @@
             
             <a href="/2020/02/07/服务器的BBR加速与流媒体解锁/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="服务器的BBR加速与流媒体解锁">
                 </p>
             </a>
             
@@ -842,7 +828,7 @@
             
             <a href="/2020/02/06/正向代理的分流原理与介绍/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="正向代理的分流原理与介绍">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="正向代理的分流原理与介绍">
                 </p>
             </a>
             
@@ -861,7 +847,7 @@
             
             <a href="/2020/02/05/Trojan的服务端与基础客户端搭建/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://barrypan-blog.oss-cn-shanghai.aliyuncs.com/blog/y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-y7gc1.png" alt="Trojan的服务端与基础客户端搭建">
                 </p>
             </a>
             
@@ -880,7 +866,7 @@
             
             <a href="/2019/08/14/学习方法总结/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/03.jpg" alt="学习方法总结">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-03.jpg" alt="学习方法总结">
                 </p>
             </a>
             
@@ -899,7 +885,7 @@
             
             <a href="/2019/07/30/黑苹果装机WriteUp/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://tuchaung.oss-cn-shanghai.aliyuncs.com/%E9%BB%91%E8%8B%B9%E6%9E%9C/%E5%B0%81%E9%9D%A2.png" alt="黑苹果装机WriteUp">
+                    <img class="thumbnail" src="https://barrypan-blog.oss-cn-shanghai.aliyuncs.com/PicStorage/2020-02-08-130708.jpg" alt="黑苹果装机WriteUp">
                 </p>
             </a>
             
@@ -931,7 +917,7 @@
                 <span class="level-item">笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/课程/">
@@ -952,7 +938,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/复旦课程/" style="font-size: 10px;">复旦课程</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/逆向/" style="font-size: 10px;">逆向</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
+        <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Noteability/" style="font-size: 10px;">Noteability</a> <a href="/tags/Trojan/" style="font-size: 20px;">Trojan</a> <a href="/tags/Xmind/" style="font-size: 10px;">Xmind</a> <a href="/tags/印象笔记/" style="font-size: 10px;">印象笔记</a> <a href="/tags/已授课/" style="font-size: 10px;">已授课</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a> <a href="/tags/计算机/" style="font-size: 20px;">计算机</a> <a href="/tags/黑苹果/" style="font-size: 10px;">黑苹果</a>
     </div>
 </div>
     
@@ -992,7 +978,7 @@
                     <span class="level-item">七月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1060,13 +1046,6 @@
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/复旦课程/">
-                        <span class="tag">复旦课程</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
                     <a class="tags has-addons" href="/tags/已授课/">
                         <span class="tag">已授课</span>
                         <span class="tag is-grey">1</span>
@@ -1084,13 +1063,6 @@
                     <a class="tags has-addons" href="/tags/计算机/">
                         <span class="tag">计算机</span>
                         <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/逆向/">
-                        <span class="tag">逆向</span>
-                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
